@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { MessageSquare } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Array of promotional messages that will rotate randomly
+// Array of promotional messages that rotate randomly
 const promoMessages = [
   "Top Rated Employment Consultant in Petaling Jaya",
   "100% Success Rate in Job Placements Across Malaysia",
@@ -15,116 +15,103 @@ const promoMessages = [
 
 export default function StickyPromoBar() {
   const [currentMessage, setCurrentMessage] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
-  // Check for mobile screens and handle resizing
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Handle scroll position
+
+ useEffect(() => {
+  setIsMobile(window.innerWidth < 768);
+  const handleResize = () => setIsMobile(window.innerWidth < 768);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
+  // Handle scroll position (only on mobile)
   useEffect(() => {
     if (!isMobile) return;
-    
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 200); 
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 200);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
+  // Rotate messages every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage(prev => (prev + 1) % promoMessages.length);
-    }, 8000); 
-    
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/0128008888', '_blank');
-  };
+  const openWhatsApp = () => window.open("https://wa.me/+60128008888", "_blank");
 
-  const barPosition = isMobile && isScrolled ? 'bottom-0' : 'top-0';
-  const barHeight = '70px'; 
+  const barPosition = isMobile && isScrolled ? "bottom-0" : "top-0";
+  const barHeight = "70px";
 
   return (
     <div className={`sticky-promo-bar ${barPosition}`}>
       <style jsx global>{`
-        /* Add space for the promo bar based on position */
         body {
-          padding-top: ${!isMobile || (isMobile && !isScrolled) ? barHeight : '0'};
-          padding-bottom: ${isMobile && isScrolled ? barHeight : '0'};
+          padding-top: ${!isMobile || !isScrolled ? barHeight : "0"};
+          padding-bottom: ${isMobile && isScrolled ? barHeight : "0"};
         }
-        
-        /* Make navbar position adjust */
         header.fixed {
-          top: ${!isMobile || (isMobile && !isScrolled) ? barHeight : '0'} !important;
+          top: ${!isMobile || !isScrolled ? barHeight : "0"} !important;
         }
-        
-        /* The sticky bar itself */
         .sticky-promo-bar {
           position: fixed;
           left: 0;
           width: 100%;
           height: ${barHeight};
-          background: linear-gradient(to right, #1a1a1a, #2c2c2c, #8b0000);
+          background: linear-gradient(145deg, #8b0000, #2c2c2c 70%, #1a1a1a);
           color: white;
           z-index: 50;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(4px);
+        }
+        .sticky-promo-bar.top-0 { top: 0; }
+        .sticky-promo-bar.bottom-0 { bottom: 0; }
+        .promo-message {
+          font-weight: 500;
+          letter-spacing: 0.3px;
+          text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        .whatsapp-button {
+          position: relative;
+          overflow: hidden;
+          border: none;
           transition: all 0.3s ease;
         }
-        
-        .sticky-promo-bar.top-0 {
-          top: 0;
-        }
-        
-        .sticky-promo-bar.bottom-0 {
-          bottom: 0;
-        }
-        
+        .whatsapp-button:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
         @media (max-width: 768px) {
-          /* Mobile-specific styles */
-          .sticky-bar-mobile-button {
-            padding: 4px 10px;
-            font-size: 13px;
-          }
+          .sticky-bar-mobile-button { padding: 6px 12px; font-size: 14px; border-radius: 24px; }
         }
       `}</style>
-      
-      <div className="container mx-auto px-4 h-full">
-        <div className="flex items-center justify-between h-full">
-          <div className="flex-1 overflow-hidden whitespace-nowrap text-sm md:text-base">
+
+      <div className="container mx-auto px-4 h-full flex items-center justify-between">
+        <div className="flex-1 overflow-hidden whitespace-nowrap text-sm md:text-base">
+          <AnimatePresence mode="wait">
             <motion.div
               key={currentMessage}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block"
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="inline-block promo-message"
             >
               {promoMessages[currentMessage]}
             </motion.div>
-          </div>
-          
-          <button 
-            onClick={openWhatsApp}
-            className="sticky-bar-mobile-button flex items-center gap-1 bg-red-600 hover:bg-red-700 px-3 py-2 rounded-full text-white text-xs md:text-sm font-medium transition-colors border border-red-400"
-          >
-            <MessageSquare size={isMobile ? 14 : 16} className="text-white" />
-            <span className="hidden md:inline">WhatsApp</span>
-            <span className="md:hidden">012 800 8888</span>
-          </button>
+          </AnimatePresence>
         </div>
+        <button 
+          onClick={openWhatsApp}
+          className="whatsapp-button sticky-bar-mobile-button flex items-center gap-2 bg-gradient-to-br from-red-500 to-red-700 px-4 py-2 rounded-full text-white text-xs md:text-sm font-bold shadow-md"
+          aria-label="Contact us on WhatsApp"
+        >
+          <MessageSquare size={isMobile ? 16 : 18} className="text-white" strokeWidth={2.5} />
+          <span className="hidden md:inline p-2">WhatsApp</span>
+        </button>
       </div>
     </div>
   );

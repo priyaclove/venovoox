@@ -43,7 +43,7 @@ export default function PayrollPEOServices() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="#contact"
+                  href="/my-en/contact-us"
                   className="group inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-medium rounded-md transition-all duration-300 hover:bg-red-700"
                 >
                   Get Started
@@ -248,7 +248,7 @@ export default function PayrollPEOServices() {
               and provide competitive benefits packages that help attract and retain top talent.
             </p>
             <Link
-              href="#contact"
+              href="/my-en/contact-us"
               className="group inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-medium rounded-md transition-all duration-300 hover:bg-red-700"
             >
               Learn More About Our PEO Services
@@ -381,7 +381,7 @@ export default function PayrollPEOServices() {
               Join hundreds of businesses that trust Venovox for their payroll and PEO needs.
             </p>
             <Link
-              href="#contact"
+              href="/my-en/contact-us"
               className="group inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-medium rounded-md text-lg transition-all duration-300 hover:bg-red-700 hover:scale-105 shadow-lg hover:shadow-red-600/20"
             >
               Schedule a Consultation

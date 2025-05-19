@@ -133,7 +133,7 @@ const PublicationsList = () => {
 
       {/* Title */}
       <motion.h2 
-        className="text-xl font-bold mb-2"
+        className="text-xl font-bold mb-2 text-black"
         whileHover={{ color: "#b91c1c" }}
         transition={{ duration: 0.2 }}
       >

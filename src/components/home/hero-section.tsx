@@ -1,5 +1,5 @@
 'use client';
-
+import Link from "next/link";
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -22,30 +22,34 @@ const HeroSection = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Anything’s possible <br />
-            <span className="font-light">when you have the</span> <br />
-            <span className="text-white font-extrabold">talent</span>
+            Asia-Pacific&apos;s Leading Experts in<br />
+            <span className="text-white font-extrabold">Risk Intelligence and Background Screening</span>
           </h1>
           <p className="text-gray-300 text-lg mb-8">
             Find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-full"
-            >
-              Find a job
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-black font-semibold px-6 py-3 rounded-full"
-            >
-              Hire talent
-            </motion.button>
-          </div>
+<div className="flex flex-col sm:flex-row gap-4">
+  <Link href="/my-en/about/">
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-red-600 text-white font-semibold px-6 py-3 rounded-full"
+    >
+      Find a job
+    </motion.button>
+  </Link>
+
+  <Link href="/my-en/contact-us/">
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-white text-black font-semibold px-6 py-3 rounded-full"
+    >
+      Hire talent
+    </motion.button>
+  </Link>
+</div>
         </motion.div>
       </div>
     </section>

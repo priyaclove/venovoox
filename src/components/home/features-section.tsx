@@ -46,9 +46,9 @@ const Features = ({ featuresInView }: { featuresInView: boolean }) => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-black">
-            Powerful <span className="text-red-700">Features</span>
-          </h2>
+          <h3 className="text-4xl font-bold mb-4 text-black">
+            Featured <span className="text-red-700">Services</span>
+          </h3>
           <p className="text-[#444444] max-w-2xl mx-auto text-lg">
             Our comprehensive platform offers everything you need for thorough, efficient background screening.
           </p>

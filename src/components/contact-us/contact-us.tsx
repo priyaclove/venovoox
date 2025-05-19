@@ -69,7 +69,7 @@ const ContactUs = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             <a
-              href="#contact-form"
+              href="/my-en/contact-us-form"
               className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
             >
               <FiSend className="text-lg" />

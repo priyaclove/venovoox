@@ -101,7 +101,7 @@ const RecruitmentServicesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Recruitment Solutions</h1>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Recruitment Solutions</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Unlock your business potential with our dedicated recruitment solutions. Learn more about our full
             catalog of offerings for organizations of any size across any industry.
