@@ -73,7 +73,7 @@ const tagVariants = {
 const PublicationsList = () => {
   return (
     <div className="bg-white py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-20">
         <motion.h1
           className="text-4xl font-bold mb-12 text-center text-red-700"
           variants={titleVariants}

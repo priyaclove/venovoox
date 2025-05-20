@@ -66,7 +66,7 @@ export default function PayrollPEOPage() {
         {/* Hero Section with Lined Background */}
         <section className="relative overflow-hidden bg-white">
           <div className="absolute inset-0 opacity-5">
-            <div className="h-full w-full" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23000000' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+            <div className="h-full w-full" style={{ backgroundImage: "url(/peo.webp" }}></div>
           </div>
           <div
             ref={addToRefs}
@@ -94,7 +94,7 @@ export default function PayrollPEOPage() {
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/payroll.webp"
+                  src="/peo.webp"
                   alt="Professional payroll management services"
                   fill
                   className="object-cover"

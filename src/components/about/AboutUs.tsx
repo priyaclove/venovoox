@@ -7,16 +7,7 @@ import Image from 'next/image'
 export default function AboutUs() {
   return (
     <div className="bg-white text-gray-900 px-6 py-24 overflow-hidden">
-      <div className="max-w-6xl mx-auto space-y-24 relative">
-        {/* Background decorative elements */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.05 }}
-          transition={{ duration: 1 }}
-          className="absolute -top-20 -right-20 -z-10"
-        >
-          <div className="text-red-700 text-[300px] font-bold opacity-20">VX</div>
-        </motion.div>
+      <div className="max-w-6xl mx-auto space-y-24 relative ">
 
         {/* Heading */}
         <motion.div
@@ -25,14 +16,14 @@ export default function AboutUs() {
           transition={{ duration: 0.6 }}
           className="text-center relative"
         >
-          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+          {/* <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
               <Users className="text-gray-200 w-24 h-24" />
             </motion.div>
-          </div>
+          </div> */}
           <h1 className="text-4xl md:text-5xl font-bold text-red-700 mb-4 pt-12">
             <motion.span 
               initial={{ opacity: 0 }}

@@ -30,10 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-   <div className="relative z-50">
+   {/* <div className="relative z-50"> */}
   <Navbar />
   <StickyPromoBar />
-</div>
+{/* </div> */}
 
         {children}
         <Footer />

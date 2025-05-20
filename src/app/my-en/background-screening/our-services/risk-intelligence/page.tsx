@@ -34,10 +34,10 @@ export default function RiskIntelligencePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <section className="prose prose-lg max-w-none mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-Time Intelligence, Real-World Impact</h2>
-          <p>
+          <p className="text-gray-700 mb-4">
             At VENOVOX, we deliver cutting-edge Risk Intelligence to help businesses stay ahead of security threats that may impact operations or personnel, especially in unfamiliar or high-risk environments.
           </p>
-          <p>
+          <p className="text-gray-700 mb-4">
             In a world saturated with unfiltered information, timely and relevant insights are essential. Our experts combine local presence with rigorous analysis to provide accurate, actionable intelligence focused on risk mitigation. We enable clients to identify, assess, and manage threats before they escalate into crises.
           </p>
         </section>
@@ -49,7 +49,7 @@ export default function RiskIntelligencePage() {
             <p className="text-gray-700 mb-4">
               Stay informed with our in-depth, regularly updated reports covering key APAC markets—including Indonesia, Thailand, Vietnam, Malaysia, Myanmar, Mainland China, Taiwan, Hong Kong, and India.
             </p>
-            <p>
+            <p className="text-gray-700 mb-4">
               Our reports provide clear insights into regional risks, enabling businesses to make informed, strategic decisions in confidence.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function RiskIntelligencePage() {
             <p className="text-gray-700 mb-4">
               Our comprehensive assessments help organizations make informed strategic decisions by identifying, evaluating, and prioritizing security threats.
             </p>
-            <p>
+            <p className="text-gray-700 mb-4">
               We assess likelihood and impact, and deliver tailored mitigation strategies. These assessments are essential for market entry, travel risk management, business continuity planning, and crisis response.
             </p>
           </div>
@@ -97,10 +97,10 @@ export default function RiskIntelligencePage() {
         <section className="bg-gray-50 p-8 rounded-lg mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-Time Intelligence, Real-World Impact</h2>
           <div className="prose prose-lg max-w-none">
-            <p>
+            <p className="text-gray-700 mb-4">
               At VENOVOX, we equip businesses with the situational awareness to respond swiftly, protect assets, and make informed, strategic decisions. We help clients safeguard their operations, people, and reputation by anticipating risks before they escalate.
             </p>
-            <p>
+            <p className="text-gray-700 mb-4">
               From geopolitical instability and social unrest to natural disasters and emerging security threats, our expert analysts monitor and assess the critical factors affecting your business. Backed by a global network and local presence, we deliver the intelligence you need to stay ahead of risks and the competition.
             </p>
           </div>

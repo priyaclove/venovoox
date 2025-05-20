@@ -8,8 +8,9 @@ import {
   FiSend, 
   FiCheckCircle, 
   FiClock, 
-  FiGlobe
+  FiGlobe,
 } from "react-icons/fi";
+
 
 const ContactUs = () => {
   const [formStatus, setFormStatus] = useState("idle");
@@ -29,6 +30,7 @@ const ContactUs = () => {
     [name]: value
   }));
 };
+const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -54,7 +56,7 @@ const ContactUs = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center pt-8">
           <div className="inline-block mb-4 px-6 py-2 bg-red-50 rounded-full text-red-700 font-medium">
             We&lsquo;re here to help
           </div>
@@ -66,24 +68,25 @@ const ContactUs = () => {
           <p className="text-xl max-w-2xl mx-auto text-gray-700 mb-12">
             Get in touch with our expert team for personalized assistance and premium support
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-6">
-            <a
-              href="/my-en/contact-us-form"
-              className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
-            >
-              <FiSend className="text-lg" />
-              Send Message
-            </a>
-            
-            <a
-              href="tel:+15551234567"
-              className="flex items-center gap-2 px-6 py-3 bg-white text-red-700 border-2 border-red-700 font-bold rounded-lg hover:bg-red-50 transition-colors"
-            >
-              <FiPhone className="text-lg" />
-              Call Us
-            </a>
-          </div>
+      <div className="flex flex-wrap justify-center gap-6">
+  {/* Send Message Button */}
+  <button
+  onClick={openWhatsApp}
+      className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
+  >
+    <FiSend className="text-lg" />
+    Send Message
+  </button>
+
+  {/* Call Us Button */}
+  <a
+    href="tel:+60128008888"
+    className="flex items-center gap-2 px-6 py-3 bg-white text-red-700 border-2 border-red-700 font-bold rounded-lg hover:bg-red-50 transition-colors"
+  >
+    <FiPhone className="text-lg" />
+    Call Us
+  </a>
+</div>
         </div>
       </section>
 
@@ -110,13 +113,13 @@ const ContactUs = () => {
                     <FiMail className="text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Email</h3>
+                    <h3 className="text-lg font-semibold mb-1 text-black">Email</h3>
                     <p className="text-gray-600 mb-1">For general inquiries:</p>
                     <a 
-                      href="mailto:contact@venovox.com" 
+                      href="mailto:dato.devan@venovox.com" 
                       className="text-red-700 hover:underline"
                     >
-                      contact@venovox.com
+                      dato.devan@venovox.com
                     </a>
                   </div>
                 </div>
@@ -126,37 +129,23 @@ const ContactUs = () => {
                     <FiPhone className="text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Phone</h3>
+                    <h3 className="text-lg font-semibold mb-1 text-black">Phone</h3>
                     <p className="text-gray-600 mb-1">Customer support:</p>
                     <a 
-                      href="tel:+15551234567" 
+                      href="tel:+60128008888" 
                       className="text-red-700 hover:underline"
                     >
-                      +1 (555) 123-4567
+                      +60 12 800 8888 
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-5">
                   <div className="p-3 bg-red-700 rounded-lg text-white">
-                    <FiMapPin className="text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">
-                      123 Business Avenue, Suite 456<br />
-                      New York, NY 10001<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-5">
-                  <div className="p-3 bg-red-700 rounded-lg text-white">
                     <FiClock className="text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Business Hours</h3>
+                    <h3 className="text-lg font-semibold mb-1 text-black">Business Hours</h3>
                     <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 6:00 PM<br />
                       Saturday: 10:00 AM - 2:00 PM<br />
@@ -281,67 +270,68 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Global Presence */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-block mb-4">
-              <div className="p-2 bg-red-100 text-red-700 rounded-full">
-                <FiGlobe className="text-xl" />
-              </div>
-            </div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">
-              Our Global Presence
-            </h2>
-            <div className="w-20 h-1 bg-red-700 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We operate in major business hubs around the world to provide you with localized support
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                city: "New York",
-                country: "United States",
-                address: "123 Business Ave, Suite 456",
-                phone: "+1 (555) 123-4567"
-              },
-              {
-                city: "London",
-                country: "United Kingdom",
-                address: "45 Commerce Street, Floor 3",
-                phone: "+44 20 1234 5678"
-              },
-              {
-                city: "Singapore",
-                country: "Singapore",
-                address: "78 Marina Boulevard, #12-01",
-                phone: "+65 6123 4567"
-              },
-              {
-                city: "Sydney",
-                country: "Australia",
-                address: "90 Harbour Street, Level 8",
-                phone: "+61 2 9876 5432"
-              }
-            ].map((office, index) => (
-              <div
-                key={index}
-                className="bg-white p-5 rounded-lg shadow-md border border-gray-100"
-              >
-                <div className="w-10 h-10 bg-red-100 text-red-700 rounded-lg flex items-center justify-center mb-4">
-                  <FiMapPin className="text-lg" />
-                </div>
-                <h3 className="text-lg font-bold mb-1 text-gray-900">{office.city}</h3>
-                <p className="text-red-700 font-medium mb-3">{office.country}</p>
-                <p className="text-gray-600 mb-1">{office.address}</p>
-                <p className="text-gray-600">{office.phone}</p>
-              </div>
-            ))}
-          </div>
+ {/* Global Presence */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <div className="inline-block mb-4">
+        <div className="p-2 bg-red-100 text-red-700 rounded-full">
+          <FiGlobe className="text-xl" />
         </div>
-      </section>
+      </div>
+      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+        Our Global Presence
+      </h2>
+      <div className="w-20 h-1 bg-red-700 mx-auto mb-6"></div>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        We operate in major business hubs around the world to provide you with localized support
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[
+        {
+          city: "Houston",
+          country: "US & Canada",
+          address: "3050 Post Oak Blvd, Suite 510, Houston, Texas 77056",
+          phone: "281 766 5055"
+        },
+        {
+          city: "Singapore",
+          country: "Singapore",
+          address: "1 Scotts Road, #24-10, Shaw Centre, 228208 Singapore",
+          phone: "6303 0529"
+        },
+        {
+          city: "Selangor",
+          country: "Malaysia",
+          address: "E-7-03, Block E, Oasis Square, No 2, Jalan PJU 1A/7, Ara Damansara, 47301 Selangor",
+          phone: "03 7800 0088"
+        },
+        {
+          city: "Dubai",
+          country: "UAE",
+          address: "Level 03, Boulevard Plaza Tower 1, Sheikh Mohammed Bin Rashid Boulevard, Downtown Dubai, P.O. Box 334155",
+          phone: "04 368 0972"
+        }
+      ].map((office, index) => (
+        <div
+          key={index}
+          className="bg-white p-5 rounded-lg shadow-md border border-gray-100"
+        >
+          <div className="w-10 h-10 bg-red-100 text-red-700 rounded-lg flex items-center justify-center mb-4">
+            <FiMapPin className="text-lg" />
+          </div>
+          <h3 className="text-lg font-bold mb-1 text-gray-900">{office.city}</h3>
+          <p className="text-red-700 font-medium mb-3">{office.country}</p>
+          <p className="text-gray-600 mb-1">{office.address}</p>
+          <p className="text-gray-600">{office.phone}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Map Section */}
       <section className="py-16">

@@ -18,14 +18,13 @@ export default function StickyPromoBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-
- useEffect(() => {
-  setIsMobile(window.innerWidth < 768);
-  const handleResize = () => setIsMobile(window.innerWidth < 768);
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
-
+  // Check for mobile view and add resize listener
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile(); // Initial check
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Handle scroll position (only on mobile)
   useEffect(() => {
@@ -45,24 +44,28 @@ export default function StickyPromoBar() {
 
   const openWhatsApp = () => window.open("https://wa.me/+60128008888", "_blank");
 
+  // Determine position based on scroll and device
   const barPosition = isMobile && isScrolled ? "bottom-0" : "top-0";
-  const barHeight = "70px";
 
   return (
     <div className={`sticky-promo-bar ${barPosition}`}>
       <style jsx global>{`
+        /* Global adjustments for the bar */
         body {
-          padding-top: ${!isMobile || !isScrolled ? barHeight : "0"};
-          padding-bottom: ${isMobile && isScrolled ? barHeight : "0"};
+          padding-top: ${!isMobile || !isScrolled ? "60px" : "0"};
+          padding-bottom: ${isMobile && isScrolled ? "60px" : "0"};
         }
+        
         header.fixed {
-          top: ${!isMobile || !isScrolled ? barHeight : "0"} !important;
+          top: ${!isMobile || !isScrolled ? "60px" : "0"} !important;
         }
+        
+        /* Bar styling */
         .sticky-promo-bar {
           position: fixed;
           left: 0;
           width: 100%;
-          height: ${barHeight};
+          height: 60px;
           background: linear-gradient(145deg, #8b0000, #2c2c2c 70%, #1a1a1a);
           color: white;
           z-index: 50;
@@ -70,27 +73,59 @@ export default function StickyPromoBar() {
           transition: all 0.3s ease;
           backdrop-filter: blur(4px);
         }
+        
         .sticky-promo-bar.top-0 { top: 0; }
         .sticky-promo-bar.bottom-0 { bottom: 0; }
+        
+        /* Mobile styling */
+        @media (max-width: 767px) {
+          .sticky-promo-bar {
+            height: 54px;
+            background: linear-gradient(145deg, #8b0000, #1a1a1a 90%);
+          }
+          
+          .promo-container {
+            padding: 0 8px;
+          }
+        }
+        
+        /* Text styling */
         .promo-message {
           font-weight: 500;
           letter-spacing: 0.3px;
           text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+          display: block;
+          white-space: nowrap;
         }
+        
+        /* Button styling */
         .whatsapp-button {
           position: relative;
           overflow: hidden;
           border: none;
           transition: all 0.3s ease;
         }
-        .whatsapp-button:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-        @media (max-width: 768px) {
-          .sticky-bar-mobile-button { padding: 6px 12px; font-size: 14px; border-radius: 24px; }
+        
+        .whatsapp-button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Pulse animation for the button */
+        .pulse {
+          animation: pulse-animation 2s infinite;
+        }
+        
+        @keyframes pulse-animation {
+          0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+          70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
         }
       `}</style>
 
-      <div className="container mx-auto px-4 h-full flex items-center justify-between">
-        <div className="flex-1 overflow-hidden whitespace-nowrap text-sm md:text-base">
+      <div className="h-full flex items-center justify-between promo-container px-3 md:px-6 lg:container lg:mx-auto">
+        {/* Left side - message */}
+        <div className="flex-1 overflow-hidden text-xs sm:text-sm md:text-base pr-2">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentMessage}
@@ -104,13 +139,15 @@ export default function StickyPromoBar() {
             </motion.div>
           </AnimatePresence>
         </div>
+        
+        {/* Right side - WhatsApp button */}
         <button 
           onClick={openWhatsApp}
-          className="whatsapp-button sticky-bar-mobile-button flex items-center gap-2 bg-gradient-to-br from-red-500 to-red-700 px-4 py-2 rounded-full text-white text-xs md:text-sm font-bold shadow-md"
+          className="whatsapp-button pulse flex items-center gap-1 md:gap-2 bg-gradient-to-br from-red-500 to-red-700 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs md:text-sm font-bold shadow-md"
           aria-label="Contact us on WhatsApp"
         >
           <MessageSquare size={isMobile ? 16 : 18} className="text-white" strokeWidth={2.5} />
-          <span className="hidden md:inline p-2">WhatsApp</span>
+          {/* <span className={isMobile ? "text-xs" : "text-sm"}>WhatsApp</span> */}
         </button>
       </div>
     </div>
