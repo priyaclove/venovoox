@@ -368,7 +368,7 @@ export default function DueDiligencePage() {
             <div className="relative h-[450px] rounded-lg overflow-hidden shadow-lg border-4 border-gray-100">
               <div className="absolute inset-0 bg-gradient-to-tr from-gray-100/50 to-transparent z-10"></div>
               <Image
-                src="/Innovation.webp"
+                src="/property-protection.jpg"
                 alt="Intellectual property protection and innovation monitoring"
                 fill
                 className="object-cover"

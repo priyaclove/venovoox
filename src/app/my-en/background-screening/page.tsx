@@ -131,7 +131,7 @@ export default function Home() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <Image 
-                  src="/background-screening.webp" 
+                  src="/vector1.png" 
                   alt="Screening Process" 
                   fill
                   className="object-cover"

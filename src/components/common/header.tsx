@@ -38,11 +38,11 @@ const navData = {
         { name: "Cyber Security", path: "/my-en/background-screening/our-services/cyber-security/" }
       ]
     },
-    { name: "Intelligence", path: "/my-en/background-screening/intelligence" },
-    { name: "Payroll", path: "/my-en/background-screening/payroll" },
-    { name: "Talent Acquisition", path: "/my-en/background-screening/talent-acquisition" },
+    // { name: "Intelligence", path: "/my-en/background-screening/intelligence" },
+    // { name: "Payroll", path: "/my-en/background-screening/payroll" },
+    // { name: "Talent Acquisition", path: "/my-en/background-screening/talent-acquisition" },
     // { name: "Academy", path: "/my-en/background-screening/academy" },
-    { name: "Publication", path: "/my-en/background-screening/publication" },
+    // { name: "Publication", path: "/my-en/background-screening/publication" },
     { name: "Contact Us", path: "/my-en/contact-us" },
   ] as MenuItem[]
 };
