@@ -193,6 +193,8 @@ export default function ServicePage() {
               </p>
             </motion.div>
 
+            <h2 className="text-3xl font-bold mb-6 text-black border-b-2 border-red-600 pb-2 inline-block mb-12">Explore Further</h2>
+
             {/* Main content sections */}
             {service.h2.map((heading, idx) => (
               <motion.section 
@@ -271,7 +273,7 @@ export default function ServicePage() {
                   </p>
                 </div>
                 <Link
-                  href="/my-en/contact"
+                  href="/my-en/contact-us"
                   className="mt-6 md:mt-0 px-6 py-3 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors"
                 >
                   Request a Consultation
@@ -344,7 +346,7 @@ export default function ServicePage() {
                   Our team of experts is ready to help you with your specific needs.
                 </p>
                 <Link
-                  href="/my-en/contact"
+                  href="/my-en/contact-us"
                   className="block w-full py-3 bg-red-600 text-center text-white font-medium hover:bg-red-700 transition-colors"
                 >
                   Contact Us

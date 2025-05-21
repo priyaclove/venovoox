@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { Mail, Phone, Send, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
@@ -17,8 +16,7 @@ const Footer = () => {
       <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Card Container */}
-          <div className="flex flex-col md:flex-row items-center bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-            {/* Left Image */}
+          {/* <div className="flex flex-col md:flex-row items-center bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
             <div className="w-full md:w-1/2 h-64 md:h-auto">
            <Image
   src="/support.jpg"
@@ -30,7 +28,6 @@ const Footer = () => {
 
             </div>
 
-            {/* Right Content */}
             <div className="w-full md:w-1/2 p-8 md:p-12 text-center md:text-left">
               <motion.h2 
                 initial={{ opacity: 0, x: -20 }}
@@ -61,7 +58,7 @@ const Footer = () => {
                 </Link>
               </motion.div>
             </div>
-          </div>
+          </div> */}
 
           {/* Social Icons */}
           <motion.div 

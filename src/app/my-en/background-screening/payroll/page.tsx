@@ -277,7 +277,7 @@ export default function PayrollPEOPage() {
         {/* What is a PEO Section with Dotted Background */}
         <section className="relative bg-gray-50 py-20">
           <div className="absolute inset-0 opacity-10">
-            <div className="h-full w-full" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fillOpacity='1' fillRule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+            <div className="h-full w-full"></div>
           </div>
           <div
             ref={addToRefs}
@@ -439,7 +439,7 @@ export default function PayrollPEOPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-red-600 py-16">
+        <section className="bg-red-700 py-16">
           <div
             ref={addToRefs}
             className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 opacity-0 translate-y-10 transition-all duration-700"
