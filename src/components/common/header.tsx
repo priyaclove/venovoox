@@ -46,6 +46,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
   const controls = useAnimation();
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -98,6 +99,20 @@ export default function Navbar() {
     }
   };
 
+  const handleMouseEnter = (itemName: string) => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+    }
+    setActiveSubMenu(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveSubMenu(null);
+    }, 150); // Small delay to prevent flicker
+    setHoverTimeout(timeout);
+  };
+
   return (
     <motion.header
       ref={navRef}
@@ -139,22 +154,28 @@ export default function Navbar() {
               const hasSubItems = item.subItems && item.subItems.length > 0;
               
               return (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative group/nav">
                   <Link
                     href={item.path}
-                    className={`px-4 py-3 text-lg font-medium rounded-md transition duration-200 flex items-center ${
+                    className={`px-4 py-3 text-lg font-medium rounded-md transition duration-200 flex items-center hover:bg-gray-50 ${
                       active 
                         ? "text-red-600 font-semibold border-b-2 border-red-600" 
                         : "text-gray-800 hover:text-red-600"
                     }`}
+                    onMouseEnter={() => hasSubItems && handleMouseEnter(item.name)}
+                    onMouseLeave={() => hasSubItems && handleMouseLeave()}
                   >
                     {item.name}
                     {hasSubItems && (
                       <ChevronDown size={16} className="ml-1" />
                     )}
                   </Link>
-                  {hasSubItems && (
-                    <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-300 z-50">
+                  {hasSubItems && activeSubMenu === item.name && (
+                    <div 
+                      className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
+                      onMouseEnter={() => handleMouseEnter(item.name)}
+                      onMouseLeave={() => handleMouseLeave()}
+                    >
                       {item.subItems?.map((sub) => (
                         <Link
                           key={sub.name}
