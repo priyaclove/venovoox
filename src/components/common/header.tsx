@@ -25,7 +25,7 @@ const navData = {
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",
-      path: "/my-en/background-screening/our-services/",
+      path: "/my-en/background-screening/",
       subItems: [
         { name: "Risk Intelligence", path: "/my-en/background-screening/our-services/risk-intelligence/" },
         { name: "Due Diligence", path: "/my-en/background-screening/our-services/due-diligence/" },
@@ -164,14 +164,14 @@ export default function Navbar() {
           </nav>
 
           {/* Contact Button - Added for better CTA */}
-          <div className="hidden lg:block ml-6">
+          {/* <div className="hidden lg:block ml-6">
             <Link
               href="/my-en/contact-us"
               className="px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition duration-200 shadow-md"
             >
               Get in Touch
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">

@@ -352,15 +352,7 @@ const Footer = () => {
   {/* Footer Bottom */}
 <div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500">
   <p>
-    © {new Date().getFullYear()} Venovox. All rights reserved. | Developed by{" "}
-    <a
-      href="https://www.daikimedia.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className=" hover:underline font-medium"
-    >
-      Daikimedia
-    </a>
+    © {new Date().getFullYear()} Venovox. All rights reserved.
   </p>
 </div>
 
