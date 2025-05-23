@@ -86,6 +86,18 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
+  const handleMenuItemClick = (item: MenuItem) => {
+    const hasSubItems = item.subItems && item.subItems.length > 0;
+    
+    if (hasSubItems) {
+      const isOpen = activeSubMenu === item.name;
+      setActiveSubMenu(isOpen ? null : item.name);
+    } else {
+      // For items without submenus, close the mobile menu
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <motion.header
       ref={navRef}
@@ -163,16 +175,6 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Contact Button - Added for better CTA */}
-          {/* <div className="hidden lg:block ml-6">
-            <Link
-              href="/my-en/contact-us"
-              className="px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition duration-200 shadow-md"
-            >
-              Get in Touch
-            </Link>
-          </div> */}
-
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
             <button
@@ -186,7 +188,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Enhanced */}
+      {/* Mobile Menu - Fixed Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -204,20 +206,36 @@ export default function Navbar() {
 
                 return (
                   <div key={item.name} className="border-b border-gray-100 last:border-0">
-                    <button
-                      onClick={() =>
-                        hasSubItems ? setActiveSubMenu(isOpen ? null : item.name) : setIsMenuOpen(false)
-                      }
-                      className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${
-                        active
-                          ? "text-red-600 bg-red-50"
-                          : "text-gray-800 hover:bg-gray-50"
-                      }`}
-                    >
-                      <span>{item.name}</span>
-                      {hasSubItems &&
-                        (isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />)}
-                    </button>
+                    {/* Main Menu Item */}
+                    {hasSubItems ? (
+                      // Items with sub-menu - button to toggle
+                      <button
+                        onClick={() => handleMenuItemClick(item)}
+                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium text-left ${
+                          active
+                            ? "text-red-600 bg-red-50"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                      </button>
+                    ) : (
+                      // Items without sub-menu - direct link
+                      <Link
+                        href={item.path}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${
+                          active
+                            ? "text-red-600 bg-red-50"
+                            : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                      </Link>
+                    )}
+
+                    {/* Sub Menu Items */}
                     {hasSubItems && isOpen && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
@@ -244,6 +262,8 @@ export default function Navbar() {
                   </div>
                 );
               })}
+              
+              {/* Contact Button */}
               <div className="pt-4">
                 <Link
                   href="/my-en/contact-us"

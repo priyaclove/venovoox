@@ -137,7 +137,7 @@ export default function AboutUs() {
                 Our Approach
               </h2>
             </div>
-            <p className=" text-justifytext-gray-600 leading-relaxed mb-6">
+            <p className=" text-justify text-gray-600 leading-relaxed mb-6">
               Our team at VENOVOX believes in a collaborative approach designed
               to understand your unique business requirements. We work
               meticulously to identify your goals, challenges, and
