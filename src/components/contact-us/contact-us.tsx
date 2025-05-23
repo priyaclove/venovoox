@@ -95,7 +95,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
-            <div>
+            <div >
               <h2 className="text-3xl font-bold mb-4 text-red-700">
                 Reach Out To Us
               </h2>
@@ -265,7 +265,19 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                   <p className="text-gray-600">Thank you for reaching out. We&lsquo;ll get back to you shortly.</p>
                 </div>
               )}
+
+              <div className="mt-10 text-center border-t pt-6">
+  <h3 className="text-lg font-semibold text-gray-900 mb-2">Or Call Us Directly</h3>
+  <p className="text-gray-600">
+    You can also reach us at{" "}
+    <a href="tel:+60128008888" className="text-red-700 font-medium hover:underline">
+      +60 12 800 8888
+    </a>
+  </p>
+</div>
+
             </div>
+            
           </div>
         </div>
       </section>
@@ -317,7 +329,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
       ].map((office, index) => (
         <div
           key={index}
-          className="bg-white p-5 rounded-lg shadow-md border border-gray-100"
+          className="bg-white p-5 rounded-lg shadow-md border border-gray-100  text-justify"
         >
           <div className="w-10 h-10 bg-red-100 text-red-700 rounded-lg flex items-center justify-center mb-4">
             <FiMapPin className="text-lg" />

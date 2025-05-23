@@ -74,12 +74,12 @@ export default function AboutUs() {
                 Our Story
               </h2>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className=" text-justify text-gray-600 leading-relaxed mb-6">
               From a modest beginning with a small-scale operation, VENOVOX has
               come a long way in its establishment as a cutting-edge service
               provider in the Talent Management Workspace.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className=" text-justify text-gray-600 leading-relaxed">
               Our successful journey is evident in our unwavering commitment to
               excellence, novelty, and customer satisfaction. Venovox offers
               wide-ranging and holistic business solutions to help companies
@@ -137,7 +137,7 @@ export default function AboutUs() {
                 Our Approach
               </h2>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className=" text-justifytext-gray-600 leading-relaxed mb-6">
               Our team at VENOVOX believes in a collaborative approach designed
               to understand your unique business requirements. We work
               meticulously to identify your goals, challenges, and
@@ -195,10 +195,10 @@ export default function AboutUs() {
     <h3 className="text-lg font-semibold text-gray-800 mb-2">
       Mr. Rakesh Iyer
     </h3>
-    <p className="text-sm text-gray-500 mb-1">
+    <p className=" text-justifytext-sm text-gray-500 mb-1">
       Compliance & Risk Specialist
     </p>
-    <p className="text-gray-600 text-sm">
+    <p className=" text-justifytext-gray-600 text-sm">
       12+ years in regulatory compliance and forensic auditing across Malaysia & Singapore.
     </p>
   </motion.div>
@@ -223,10 +223,10 @@ export default function AboutUs() {
     <h3 className="text-lg font-semibold text-gray-800 mb-2">
       Ms. Sarah Lim
     </h3>
-    <p className="text-sm text-gray-500 mb-1">
+    <p className=" text-justifytext-sm text-gray-500 mb-1">
       Talent & Screening Consultant
     </p>
-    <p className="text-gray-600 text-sm">
+    <p className=" text-justifytext-gray-600 text-sm">
       Expert in executive vetting and psychometric profiling with 10+ years of HR experience.
     </p>
   </motion.div>
@@ -251,10 +251,10 @@ alt="Dr. Anjali Menon"
     <h3 className="text-lg font-semibold text-gray-800 mb-2">
       Dr. Anjali Menon
     </h3>
-    <p className="text-sm text-gray-500 mb-1">
+    <p className=" text-justifytext-sm text-gray-500 mb-1">
       HR & Organizational Strategy Expert
     </p>
-    <p className="text-gray-600 text-sm">
+    <p className=" text-justifytext-gray-600 text-sm">
       15+ years in HR strategy, risk reduction, and leadership consulting for global firms.
     </p>
   </motion.div>
@@ -277,7 +277,7 @@ alt="Dr. Anjali Menon"
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Hiring?
             </h3>
-            <p className="text-red-100 mb-6 max-w-2xl mx-auto">
+            <p className=" text-justifytext-red-100 mb-6 max-w-2xl mx-auto">
               Our experts are ready to discuss your unique needs and craft a
               solution that drives results.
             </p>

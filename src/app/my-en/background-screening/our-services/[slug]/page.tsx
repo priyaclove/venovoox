@@ -188,7 +188,7 @@ export default function ServicePage() {
               <h2 className="text-3xl font-bold mb-6 text-black border-b-2 border-red-600 pb-2 inline-block">
                 Overview
               </h2>
-              <p className="text-gray-800 leading-relaxed text-lg">
+              <p className="text-gray-800 leading-relaxed text-lg  text-justify">
                 {service.content[0]}
               </p>
             </motion.div>
@@ -199,7 +199,7 @@ export default function ServicePage() {
             {service.h2.map((heading, idx) => (
               <motion.section 
                 key={idx} 
-                className="mb-12"
+                className="mb-12  text-justify"
                 variants={fadeInUp}
               >
                 <h2 className="text-2xl font-bold mb-6 text-black border-l-4 border-red-600 pl-4">
@@ -249,7 +249,7 @@ export default function ServicePage() {
                     
                     // Regular paragraph
                     return (
-                      <p key={pIdx} className="mb-4 text-gray-700 leading-relaxed">
+                      <p key={pIdx} className="mb-4 text-gray-700 leading-relaxed  text-justify">
                         {paragraph}
                       </p>
                     )
@@ -268,7 +268,7 @@ export default function ServicePage() {
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Ready to get started?</h3>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300  text-justify">
                     Let our experts help you navigate the complexities of your business challenges.
                   </p>
                 </div>
@@ -342,7 +342,7 @@ export default function ServicePage() {
               {/* Contact box */}
               <div className="bg-black text-white p-6">
                 <h3 className="text-xl font-bold mb-4">Need Assistance?</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6  text-justify">
                   Our team of experts is ready to help you with your specific needs.
                 </p>
                 <Link
@@ -363,10 +363,10 @@ export default function ServicePage() {
                   </div>
                   <h3 className="ml-3 text-lg font-semibold text-black">Client Testimonial</h3>
                 </div>
-                <p className="text-gray-700 italic">
+                <p className="text-gray-700 italic  text-justify">
                 &ldquo;VENOVOX provided exceptional service that helped us identify and mitigate risks we weren&ldquo;t even aware of. Their expertise was invaluable to our business operations.&ldquo;
                 </p>
-                <p className="mt-4 text-gray-900 font-medium">
+                <p className="mt-4 text-gray-900 font-medium  text-justify">
                   — Director of Operations, Fortune 500 Company
                 </p>
               </div>
