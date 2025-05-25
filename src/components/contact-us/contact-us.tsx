@@ -4,11 +4,9 @@ import React, { useState } from "react";
 import { 
   FiMail, 
   FiPhone, 
-  FiMapPin, 
   FiSend, 
   FiCheckCircle, 
   FiClock, 
-  FiGlobe,
 } from "react-icons/fi";
 
 
@@ -283,7 +281,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
       </section>
 
  {/* Global Presence */}
-<section className="py-16 bg-gray-50">
+{/* <section className="py-16 bg-gray-50">
   <div className="container mx-auto px-4">
     <div className="text-center mb-12">
       <div className="inline-block mb-4">
@@ -342,11 +340,11 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
 
       {/* Map Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4 text-center text-gray-900">
             Find Our Headquarters
@@ -355,7 +353,6 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
           <div className="w-20 h-1 bg-red-700 mx-auto mb-12"></div>
 
           <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200 h-80">
-            {/* Replace with your actual map embed */}
             <div className="w-full h-full bg-gray-100 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -367,7 +364,6 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
             </div>
           </div>
 
-          {/* Optional Call-to-Action Button */}
           <div className="mt-8 text-center">
             <a
               href="#"
@@ -377,7 +373,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

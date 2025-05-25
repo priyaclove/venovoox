@@ -29,7 +29,7 @@ const navData = {
       subItems: [
         { name: "Risk Intelligence", path: "/my-en/background-screening/our-services/risk-intelligence/" },
         { name: "Due Diligence", path: "/my-en/background-screening/our-services/due-diligence/" },
-        { name: "Risk Audit", path: "/my-en/background-screening/our-services/risk-audit/" },
+        { name: "Risk & Audit", path: "/my-en/background-screening/our-services/risk-audit/" },
         { name: "Compliance", path: "/my-en/background-screening/our-services/compliance/" },
         { name: "Intellectual Property", path: "/my-en/background-screening/our-services/intellectual-property/" },
         { name: "Counter Measures", path: "/my-en/background-screening/our-services/counter-measures/" },

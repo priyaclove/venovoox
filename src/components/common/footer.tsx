@@ -139,12 +139,15 @@ const Footer = () => {
               <h3 className="text-lg font-semibold text-gray-900">Our Services</h3>
               <ul className="space-y-3">
                 {[
-                  { name: "Risk Intelligence", url: "/my-en/background-screening/our-services/risk-intelligence" },
-                  { name: "Due Diligence", url: "/my-en/background-screening/our-services/due-diligence" },
-                  { name: "Compliance", url: "/my-en/background-screening/our-services/compliance" },
-                  { name: "Financial Crime", url: "/my-en/background-screening/our-services/financial-crime" },
-                  { name: "HR Services", url: "/my-en/background-screening/hr-services" },
-                  { name: "Cyber Security", url: "/my-en/background-screening/our-services/cyber-security" },
+                  { name: "Risk Intelligence", url: "/my-en/background-screening/our-services/risk-intelligence/" },
+        { name: "Due Diligence", url: "/my-en/background-screening/our-services/due-diligence/" },
+        { name: "Risk & Audit", url: "/my-en/background-screening/our-services/risk-audit/" },
+        { name: "Compliance", url: "/my-en/background-screening/our-services/compliance/" },
+        { name: "Intellectual Property", url: "/my-en/background-screening/our-services/intellectual-property/" },
+        { name: "Counter Measures", url: "/my-en/background-screening/our-services/counter-measures/" },
+        { name: "Financial Crime", url: "/my-en/background-screening/our-services/financial-crime/" },
+        { name: "HR Services", url: "/my-en/background-screening/our-services/hr-services/" },
+        { name: "Cyber Security", url: "/my-en/background-screening/our-services/cyber-security/" }
                 ].map((service, index) => (
                   <motion.li 
                     key={service.name}
