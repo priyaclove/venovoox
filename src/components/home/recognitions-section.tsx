@@ -4,6 +4,10 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const recognizedByLogos = [
+  { src: '/ism.jpeg', alt: 'ISM Logo' },
+    { src: '/isms1.jpeg', alt: 'ISM Logo' },
+  { src: '/isms2.jpeg', alt: 'ISM Logo' },
+  { src: '/isms3.jpeg', alt: 'ISM Logo' },
   { src: '/napbs-logo.png', alt: 'PBSA Logo' },
   { src: '/md-status.png', alt: 'Malaysia Digital Logo' },
   { src: '/mof.png', alt: 'MOF Registered Company Bumiputra Status Logo' },

@@ -339,103 +339,109 @@ const Footer = () => {
             Our Offices
           </motion.h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {[
-              {
-                title: "US & Canada",
-                company: "Venovox LLC",
-                lines: [
-                  "3050 Post Oak Blvd",
-                  "Suite 510, Houston, Texas 77056",
-                  <a
-                    key="phone"
-                    href="tel:2817665055"
-                    className="hover:text-red-600 transition"
-                  >
-                    281 766 5055
-                  </a>,
-                ],
-              },
-              {
-                title: "Singapore",
-                company: "Venovox Pte. Ltd.",
-                lines: [
-                  "1 Scotts Road, #24-10, Shaw Centre",
-                  "228208 Singapore",
-                  <a
-                    key="phone"
-                    href="tel:63030529"
-                    className="hover:text-red-600 transition"
-                  >
-                    6303 0529
-                  </a>,
-                ],
-              },
-              {
-                title: "Malaysia",
-                company: "Venovox Sdn Bhd",
-                lines: [
-                  "E-7-03, Block E, Oasis Square",
-                  "No 2, Jalan PJU 1A/7, Ara Damansara",
-                  "47301 Selangor",
-                  <a
-                    key="phone"
-                    href="tel:0378000088"
-                    className="hover:text-red-600 transition"
-                  >
-                    03 7800 0088
-                  </a>,
-                ],
-              },
-              {
-                title: "UAE",
-                company: "Venovox Pvt. Ltd.",
-                lines: [
-                  "Level 03, Boulevard Plaza Tower 1",
-                  "Sheikh Mohammed Bin Rashid Boulevard",
-                  "Downtown Dubai, P.O. Box 334155",
-                  <a
-                    key="phone"
-                    href="tel:043680972"
-                    className="hover:text-red-600 transition"
-                  >
-                    04 368 0972
-                  </a>,
-                ],
-              },
-            ].map((office, index) => (
-              <motion.div
-                key={office.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="space-y-4"
-              >
-                <h4 className="font-medium text-gray-800 text-sm md:text-base">
-                  {office.title}
-                </h4>
-                <div className="flex items-start">
-                  <MapPin className="h-4 w-4 text-red-600 mt-0.5 mr-2" />
-                  <div>
-                    <p className="text-gray-600 text-xs md:text-sm">
-                      {office.company}
-                    </p>
-                    {office.lines.map((line, lineIndex) => (
-                      <p
-                        key={lineIndex}
-                        className="text-gray-600 text-xs md:text-sm"
-                      >
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-left">
+  {[
+    {
+      title: "US & Canada",
+      company: "Venovox LLC",
+      lines: [
+        "3050 Post Oak Blvd",
+        "Suite 510,",
+        "Houston, Texas",
+        "77056",
+        <a
+          key="phone"
+          href="tel:2817665055"
+          className="hover:text-red-600 transition block mt-1"
+        >
+          📞 281 766 5055
+        </a>,
+      ],
+    },
+    {
+      title: "Singapore",
+      company: "Venovox Pte. Ltd.",
+      lines: [
+        "1 Scotts Road,",
+        "#24-10,",
+        "Shaw Centre,",
+        "228208",
+        "Singapore",
+        <a
+          key="phone"
+          href="tel:63030529"
+          className="hover:text-red-600 transition block mt-1"
+        >
+          📞 6303 0529
+        </a>,
+      ],
+    },
+    {
+      title: "Malaysia",
+      company: "Venovox Sdn Bhd",
+      lines: [
+        "E-7-03, Block E,",
+        "Oasis Square,",
+        "No 2, Jalan PJU 1A/7,",
+        "Ara Damansara,",
+        "47301 Selangor",
+        <a
+          key="phone"
+          href="tel:0378000088"
+          className="hover:text-red-600 transition block mt-1"
+        >
+          📞 03 7800 0088
+        </a>,
+      ],
+    },
+    {
+      title: "UAE",
+      company: "Venovox Pvt. Ltd.",
+      lines: [
+        "Level 03,",
+        "Boulevard Plaza Tower 1",
+        "Sheikh Mohammed Bin",
+        "Rashid Boulevard,",
+        "Downtown Dubai,",
+        "UAE, P.O. Box",
+        "334155",
+        <a
+          key="phone"
+          href="tel:043680972"
+          className="hover:text-red-600 transition block mt-1"
+        >
+          📞 04 368 0972
+        </a>,
+      ],
+    },
+  ].map((office, index) => (
+    <motion.div
+      key={office.title}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="flex flex-col gap-2"
+    >
+      <h4 className="font-semibold text-gray-800 text-base">{office.title}</h4>
+      <div className="flex items-start gap-2">
+        <MapPin className="h-4 w-4 text-red-600 mt-1" />
+        <div className="flex flex-col gap-1">
+          <p className="text-gray-600 text-sm font-medium">
+            {office.company}
+          </p>
+          {office.lines.map((line, i) => (
+            <p key={i} className="text-gray-600 text-sm leading-tight">
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
           {/* Footer Bottom */}
-          <div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500">
+          <div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500 content text-justify">
             <p>© {new Date().getFullYear()} Venovox. All rights reserved.</p>
           </div>
         </div>
