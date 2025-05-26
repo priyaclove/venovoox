@@ -244,12 +244,8 @@ export default function ServicePage() {
       <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center text-sm text-gray-600">
-            <Link href="/my-en" className="hover:text-red-600 transition-colors duration-200">
-              Home
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
             <Link href="/my-en/background-screening" className="hover:text-red-600 transition-colors duration-200">
-              Background Screening
+              Home
             </Link>
             <span className="mx-2 text-gray-400">/</span>
             <Link
@@ -291,7 +287,7 @@ export default function ServicePage() {
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="mb-6 md:mb-0">
                   <h3 className="text-2xl font-bold mb-2">Ready to Get Started?</h3>
-                  <p className="text-gray-300 text-justify max-w-md">
+                  <p className="text-gray-300 text-justify max-w-md mr-10">
                     Let our experts help you navigate the complexities of your business challenges with tailored
                     solutions.
                   </p>

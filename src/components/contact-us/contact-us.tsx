@@ -130,10 +130,10 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                     <h3 className="text-lg font-semibold mb-1 text-black">Phone</h3>
                     <p className="text-gray-600 mb-1">Customer support:</p>
                     <a 
-                      href="tel:+60128008888" 
+                      href="tel:+60378000088" 
                       className="text-red-700 hover:underline"
                     >
-                      +60 12 800 8888 
+                +603 7800 0088
                     </a>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                     <h3 className="text-lg font-semibold mb-1 text-black">Business Hours</h3>
                     <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 2:00 PM<br />
+                      Saturday: Closed<br />
                       Sunday: Closed
                     </p>
                   </div>

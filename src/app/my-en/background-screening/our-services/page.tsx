@@ -65,9 +65,10 @@ export default function OurServicesPage() {
   }
 
   // Helper function to get image for each service
-  const getServiceImage = (serviceId: string) => {
-    return `/placeholder.svg?height=300&width=400&text=${serviceId.replace(/-/g, " ").toUpperCase()}`
-  }
+const getServiceImage = (serviceId: string, image?: string) => {
+  return image || `/placeholder.svg?height=300&width=400&text=${serviceId.replace(/-/g, " ").toUpperCase()}`
+}
+
 
   return (
     <div className="bg-white">
@@ -75,7 +76,7 @@ export default function OurServicesPage() {
       <div className="relative bg-black text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1600&text=VENOVOX SERVICES"
+            src=""
             alt="Our Services"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -180,7 +181,6 @@ export default function OurServicesPage() {
                     style={{ objectFit: "cover" }}
                     className="group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   <div className="absolute top-0 left-0 w-0 h-1 bg-red-600 group-hover:w-full transition-all duration-500"></div>
                 </div>
 

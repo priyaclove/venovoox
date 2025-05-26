@@ -20,51 +20,6 @@ const Footer = () => {
     <>
       <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Card Container */}
-          {/* <div className="flex flex-col md:flex-row items-center bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-            <div className="w-full md:w-1/2 h-64 md:h-auto">
-           <Image
-  src="/support.jpg"
-  alt="Customer Support"
-  width={600}
-  height={400}
-  className="w-full h-full object-cover"
-/>
-
-            </div>
-
-            <div className="w-full md:w-1/2 p-8 md:p-12 text-center md:text-left">
-              <motion.h2 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl font-bold text-black mb-4"
-              >
-                Get In Touch
-              </motion.h2>
-              <motion.p 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-gray-600 text-lg mb-6"
-              >
-                Need to get in touch with us immediately? Drop us a ticket and we will respond within 24 hours.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <Link
-                  href="/contact"
-                  className="inline-block bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  CONTACT US
-                </Link>
-              </motion.div>
-            </div>
-          </div> */}
-
           {/* Social Icons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,47 +63,9 @@ const Footer = () => {
 
       <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 px-6 py-12 md:py-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {/* Quick Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="space-y-4"
-            >
-              <h3 className="text-lg font-semibold text-gray-900">
-                Quick Links
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  { name: "Home", url: "/my-en/background-screening" },
-                  { name: "About", url: "/my-en/about" },
-                  {
-                    name: "Services",
-                    url: "/my-en/background-screening/our-services/risk-intelligence",
-                  },
-                  // { name: "Resources", url: "#" },
-                  // { name: "Careers", url: "#" },
-                  { name: "Contact", url: "/my-en/contact-us" },
-                ].map((link, index) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <Link
-                      href={link.url}
-                      className="text-gray-600 hover:text-red-600 transition duration-200 text-sm md:text-base flex items-start group"
-                    >
-                      <span className="h-1 w-1 bg-red-600 rounded-full mt-2 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+       {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"> */}
+           
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
             {/* Services */}
             <motion.div
