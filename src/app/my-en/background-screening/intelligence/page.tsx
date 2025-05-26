@@ -249,7 +249,7 @@ export default function DueDiligencePage() {
                 <div className="flex items-start">
                   <Shield className="text-red-600 mr-3 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-lg">Cybersecurity Risk Assessment</h4>
+                    <h4 className="font-semibold text-gray-900 text-lg">Cyber Security Risk Assessment</h4>
                     <p className="text-gray-600 mt-2">
                       Evaluation of digital security posture, identification of vulnerabilities, and development of
                       mitigation strategies to protect sensitive data and systems.

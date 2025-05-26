@@ -3,7 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Mail, Phone, Send, MapPin } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -61,17 +66,29 @@ const Footer = () => {
           </div> */}
 
           {/* Social Icons */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="flex justify-center gap-20 mt-10"
           >
             {[
-              { icon: <FaFacebookF />, url: "https://www.facebook.com/venovox" },
-              { icon: <FaInstagram />, url: "https://www.instagram.com/venovox/" },
-              { icon: <FaWhatsapp />, url: "https://api.whatsapp.com/send/?phone=%2B60128008888&text&type=phone_number&app_absent=0" },
-              { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/venovox/" }
+              {
+                icon: <FaFacebookF />,
+                url: "https://www.facebook.com/venovox",
+              },
+              {
+                icon: <FaInstagram />,
+                url: "https://www.instagram.com/venovox/",
+              },
+              {
+                icon: <FaWhatsapp />,
+                url: "https://api.whatsapp.com/send/?phone=%2B60128008888&text&type=phone_number&app_absent=0",
+              },
+              {
+                icon: <FaLinkedinIn />,
+                url: "https://www.linkedin.com/company/venovox/",
+              },
             ].map((social, index) => (
               <motion.a
                 key={index}
@@ -100,17 +117,22 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Quick Links
+              </h3>
               <ul className="space-y-3">
                 {[
                   { name: "Home", url: "/my-en/background-screening" },
                   { name: "About", url: "/my-en/about" },
-                  { name: "Services", url: "/my-en/background-screening/our-services/risk-intelligence" },
-                  { name: "Resources", url: "#" },
-                  { name: "Careers", url: "#" },
+                  {
+                    name: "Services",
+                    url: "/my-en/background-screening/our-services/risk-intelligence",
+                  },
+                  // { name: "Resources", url: "#" },
+                  // { name: "Careers", url: "#" },
                   { name: "Contact", url: "/my-en/contact-us" },
                 ].map((link, index) => (
-                  <motion.li 
+                  <motion.li
                     key={link.name}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -136,20 +158,49 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900">Our Services</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Our Services
+              </h3>
               <ul className="space-y-3">
                 {[
-                  { name: "Risk Intelligence", url: "/my-en/background-screening/our-services/risk-intelligence/" },
-        { name: "Due Diligence", url: "/my-en/background-screening/our-services/due-diligence/" },
-        { name: "Risk & Audit", url: "/my-en/background-screening/our-services/risk-audit/" },
-        { name: "Compliance", url: "/my-en/background-screening/our-services/compliance/" },
-        { name: "Intellectual Property", url: "/my-en/background-screening/our-services/intellectual-property/" },
-        { name: "Counter Measures", url: "/my-en/background-screening/our-services/counter-measures/" },
-        { name: "Financial Crime", url: "/my-en/background-screening/our-services/financial-crime/" },
-        { name: "HR Services", url: "/my-en/background-screening/our-services/hr-services/" },
-        { name: "Cyber Security", url: "/my-en/background-screening/our-services/cyber-security/" }
+                  {
+                    name: "Risk Intelligence",
+                    url: "/my-en/background-screening/our-services/risk-intelligence/",
+                  },
+                  {
+                    name: "Due Diligence",
+                    url: "/my-en/background-screening/our-services/due-diligence/",
+                  },
+                  {
+                    name: "Risk & Audit",
+                    url: "/my-en/background-screening/our-services/risk-audit/",
+                  },
+                  {
+                    name: "Compliance",
+                    url: "/my-en/background-screening/our-services/compliance/",
+                  },
+                  {
+                    name: "Intellectual Property",
+                    url: "/my-en/background-screening/our-services/intellectual-property/",
+                  },
+                  {
+                    name: "Counter Measures",
+                    url: "/my-en/background-screening/our-services/counter-measures/",
+                  },
+                  {
+                    name: "Financial Crime",
+                    url: "/my-en/background-screening/our-services/financial-crime/",
+                  },
+                  {
+                    name: "HR Services",
+                    url: "/my-en/background-screening/our-services/hr-services/",
+                  },
+                  {
+                    name: "Cyber Security",
+                    url: "/my-en/background-screening/our-services/cyber-security/",
+                  },
                 ].map((service, index) => (
-                  <motion.li 
+                  <motion.li
                     key={service.name}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -175,9 +226,11 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900">Contact Us</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Contact Us
+              </h3>
               <div className="space-y-3">
-                <motion.a 
+                <motion.a
                   href="tel:0128008888"
                   className="flex items-start group"
                   whileHover={{ x: 5 }}
@@ -191,8 +244,8 @@ const Footer = () => {
                     <p className="text-gray-400 text-xs">Malaysia Hotline</p>
                   </div>
                 </motion.a>
-                
-                <motion.a 
+
+                <motion.a
                   href="mailto:dato.devan@venovox.com"
                   className="flex items-start group"
                   whileHover={{ x: 5 }}
@@ -216,7 +269,9 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900">Get In Touch</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Get In Touch
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-3">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -264,7 +319,7 @@ const Footer = () => {
                   Send Message
                 </motion.button>
               </form>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -275,7 +330,7 @@ const Footer = () => {
             </motion.div>
           </div>
 
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -292,7 +347,13 @@ const Footer = () => {
                 lines: [
                   "3050 Post Oak Blvd",
                   "Suite 510, Houston, Texas 77056",
-                  <a key="phone" href="tel:2817665055" className="hover:text-red-600 transition">281 766 5055</a>
+                  <a
+                    key="phone"
+                    href="tel:2817665055"
+                    className="hover:text-red-600 transition"
+                  >
+                    281 766 5055
+                  </a>,
                 ],
               },
               {
@@ -301,7 +362,13 @@ const Footer = () => {
                 lines: [
                   "1 Scotts Road, #24-10, Shaw Centre",
                   "228208 Singapore",
-                  <a key="phone" href="tel:63030529" className="hover:text-red-600 transition">6303 0529</a>
+                  <a
+                    key="phone"
+                    href="tel:63030529"
+                    className="hover:text-red-600 transition"
+                  >
+                    6303 0529
+                  </a>,
                 ],
               },
               {
@@ -311,7 +378,13 @@ const Footer = () => {
                   "E-7-03, Block E, Oasis Square",
                   "No 2, Jalan PJU 1A/7, Ara Damansara",
                   "47301 Selangor",
-                  <a key="phone" href="tel:0378000088" className="hover:text-red-600 transition">03 7800 0088</a>
+                  <a
+                    key="phone"
+                    href="tel:0378000088"
+                    className="hover:text-red-600 transition"
+                  >
+                    03 7800 0088
+                  </a>,
                 ],
               },
               {
@@ -321,11 +394,17 @@ const Footer = () => {
                   "Level 03, Boulevard Plaza Tower 1",
                   "Sheikh Mohammed Bin Rashid Boulevard",
                   "Downtown Dubai, P.O. Box 334155",
-                  <a key="phone" href="tel:043680972" className="hover:text-red-600 transition">04 368 0972</a>
+                  <a
+                    key="phone"
+                    href="tel:043680972"
+                    className="hover:text-red-600 transition"
+                  >
+                    04 368 0972
+                  </a>,
                 ],
               },
             ].map((office, index) => (
-              <motion.div 
+              <motion.div
                 key={office.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -342,7 +421,10 @@ const Footer = () => {
                       {office.company}
                     </p>
                     {office.lines.map((line, lineIndex) => (
-                      <p key={lineIndex} className="text-gray-600 text-xs md:text-sm">
+                      <p
+                        key={lineIndex}
+                        className="text-gray-600 text-xs md:text-sm"
+                      >
                         {line}
                       </p>
                     ))}
@@ -352,13 +434,10 @@ const Footer = () => {
             ))}
           </div>
 
-  {/* Footer Bottom */}
-<div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500">
-  <p>
-    © {new Date().getFullYear()} Venovox. All rights reserved.
-  </p>
-</div>
-
+          {/* Footer Bottom */}
+          <div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500">
+            <p>© {new Date().getFullYear()} Venovox. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </>
