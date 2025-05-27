@@ -2,7 +2,7 @@
   "services": [
     {
       "id": "risk-intelligence",
-      "image":"risk.webp",
+      "image":"/risk.webp",
       "title": "Risk Intelligence",
       "url": "/my-en/background-screening/our-services/risk-intelligence/",
       "metaTitle": "Risk Intelligence Services | VENOVOX",
@@ -54,7 +54,7 @@
     {
       "id": "due-diligence",
       "title": "Due Diligence",
-
+      "image":"/due.webp",
       "url": "/my-en/background-screening/our-services/due-diligence",
       "metaTitle": "Due Diligence Services | VENOVOX",
       "metaDescription": "VENOVOX's Due Diligence services help businesses manage risks by identifying holding structures, legal proceedings, and potential financial risks.",
@@ -108,7 +108,7 @@
       "id": "risk-audit",
       "title": "Risk & Audit",
       "url": "/my-en/background-screening/our-services/risk-audit",
-      "image":"riskandaudit.webp",
+      "image":"/riskandaudit.webp",
       "metaTitle": "Risk & Audit Services | VENOVOX",
       "metaDescription": "VENOVOX's Risk & Audit services help businesses effectively manage risks through financial stress testing, business recovery, and strategic risk planning.",
       "h1": "RISK & AUDIT",
@@ -160,7 +160,7 @@
       "id": "compliance",
       "title": "Compliance",
       "url": "/my-en/background-screening/our-services/compliance",
-      "image":"compilence.webp",
+      "image":"/compliance.jpg",
       "metaTitle": "Compliance Services | VENOVOX",
       "metaDescription": "VENOVOX's Compliance services help businesses implement robust anti-money laundering programs and other compliance programs to address global and local regulatory controls.",
       "h1": "COMPLIANCE",
@@ -212,7 +212,7 @@
     {
       "id": "intellectual-property",
       "title": "Intellectual Property",
-      "image":"intellectual.webp",
+      "image":"/intellectual.webp",
       "url": "/my-en/background-screening/our-services/intellectual-property",
       "metaTitle": "Intellectual Property Services | VENOVOX",
       "metaDescription": "VENOVOX's Intellectual Property services help businesses protect their IP from infringement and counterfeiting through tailored protection programs and enforcement actions.",
@@ -264,7 +264,7 @@
     {
       "id": "counter-measures",
       "title": "Counter Measures",
-      "image":"counter.webp",
+      "image":"/count-measure.jpg",
       "url": "/my-en/background-screening/our-services/counter-measures",
       "metaTitle": "Counter Measures Services | VENOVOX",
       "metaDescription": "VENOVOX's Counter Measures services help businesses detect and remove unauthorized surveillance devices to protect confidential information from being compromised.",
@@ -310,7 +310,7 @@
     {
       "id": "financial-crime",
       "title": "Financial Crime",
-      "image":"financial.webp",
+      "image":"/financial-crime.jpg",
       "url": "/my-en/background-screening/our-services/financial-crime",
       "metaTitle": "Financial Crime Services | VENOVOX",
       "metaDescription": "VENOVOX's Financial Crime services help businesses detect and prevent financial crimes through fraud detection, asset tracing, and forensic audits.",
@@ -370,7 +370,7 @@
     {
       "id": "hr-services",
       "title": "HR Services",
-      "image":"hr.webp",
+      "image":"/hr-services.webp",
       "url": "/my-en/background-screening/our-services/hr-services",
       "metaTitle": "HR Services | VENOVOX",
       "metaDescription": "VENOVOX's HR Services help businesses optimize hiring practices through background screening, workplace investigations, and professional employer organization services.",
@@ -419,6 +419,7 @@
     {
       "id": "cyber-security",
       "title": "Cyber Security",
+      "image":"/Counter-Measures.jpg",
       "url": "/my-en/background-screening/our-services/cyber-security",
       "metaTitle": "Cyber Security Services | VENOVOX",
       "metaDescription": "VENOVOX's Cyber Security services help businesses protect their digital assets from evolving cyber threats through comprehensive security assessments and solutions.",
