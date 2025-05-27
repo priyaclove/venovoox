@@ -175,6 +175,19 @@ const Footer = () => {
                     </p>
                   </div>
                 </motion.a>
+                  <motion.a
+                  href="mailto:kelly@venovox.com"
+                  className="flex items-start group"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Mail className="h-5 w-5 text-red-600 mt-0.5 mr-2 group-hover:animate-pulse" />
+                  <div>
+                    <p className="text-gray-600 text-sm md:text-base group-hover:text-red-600 transition">
+                     kelly@venovox.com
+                    </p>
+                  </div>
+                </motion.a>
               </div>
             </motion.div>
 

@@ -119,6 +119,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                     >
                       dato.devan@venovox.com
                     </a>
+                    
                   </div>
                 </div>
 

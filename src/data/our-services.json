@@ -15,6 +15,28 @@
         "Security Risk Assessments",
         "Strategic Advisory"
       ],
+      "serviceHighlights": [
+    {
+      "text": "Insight-Driven Risk Management",
+      "anchor": "#insight-driven-risk-management"
+    },
+    {
+      "text": "Real-Time Intelligence, Real-World Impact",
+      "anchor": "#real-time-intelligence-real-world-impact"
+    },
+    {
+      "text": "Risk Management Report",
+      "anchor": "#risk-management-report"
+    },
+    {
+      "text": "Security Risk Assessments",
+      "anchor": "#security-risk-assessments"
+    },
+    {
+      "text": "Strategic Advisory",
+      "anchor": "#strategic-advisory"
+    }
+  ],
       "h3": [],
       "content": [
         "VENOVOX's customers will receive cutting-edge Risk Intelligence support, which helps businesses stay alert to security threats that could impact operations or personnel, especially in unfamiliar or high-risk environments.",
@@ -60,6 +82,20 @@
       "metaDescription": "VENOVOX's Due Diligence services help businesses manage risks by identifying holding structures, legal proceedings, and potential financial risks.",
       "h1": "DUE DILIGENCE",
       "h2": ["Understanding Due Diligence", "Comprehensive Due Diligence Approach", "Our Due Diligence Solutions"],
+        "serviceHighlights": [
+    {
+      "text": "Understanding Due Diligence",
+      "anchor": "#understanding-due-diligence"
+    },
+    {
+      "text": "Comprehensive Due Diligence Approach",
+      "anchor": "#comprehensive-due-diligence-approach"
+    },
+    {
+      "text": "Our Due Diligence Solutions",
+      "anchor": "#our-due-diligence-solutions"
+    }
+  ],
       "h3": [],
       "content": [
         "Due diligence is a crucial tool for businesses to manage risks, but it is often neglected and overlooked in the corporate world. This negligence can be attributed to various reasons, including failure to recognize the importance of due diligence and entrusting incapable third-party agencies to oversee this process.",
@@ -113,6 +149,20 @@
       "metaDescription": "VENOVOX's Risk & Audit services help businesses effectively manage risks through financial stress testing, business recovery, and strategic risk planning.",
       "h1": "RISK & AUDIT",
       "h2": ["Understanding Risk Management", "Continuous Risk Management", "Our Risk & Audit Solutions"],
+       "serviceHighlights": [
+    {
+      "text": "Understanding Risk Management",
+      "anchor": "#understanding-risk-management"
+    },
+    {
+      "text": "Continuous Risk Management",
+      "anchor": "#continuous-risk-management"
+    },
+    {
+      "text": "Our Risk & Audit Solutions",
+      "anchor": "#our-risk-and-audit-solutions"
+    }
+  ],
       "h3": [],
       "content": [
         "Most businesses across all industries and sectors often overlook the complexity and effectiveness of risk management. The positioning of risk management has been underlined in the 2018 investment scandal in Malaysia, whereby the woeful incompetence of boards and senior managers in leading financial institutions was exposed.",
@@ -165,6 +215,20 @@
       "metaDescription": "VENOVOX's Compliance services help businesses implement robust anti-money laundering programs and other compliance programs to address global and local regulatory controls.",
       "h1": "COMPLIANCE",
       "h2": ["Understanding Compliance", "Regulatory Expertise", "How Can VENOVOX Help"],
+       "serviceHighlights": [
+    {
+      "text": "Understanding Risk Management",
+      "anchor": "#understanding-risk-management"
+    },
+    {
+      "text": "Continuous Risk Management",
+      "anchor": "#continuous-risk-management"
+    },
+    {
+      "text": "Our Risk & Audit Solutions",
+      "anchor": "#our-risk-and-audit-solutions"
+    }
+  ],
       "h3": [],
       "content": [
         "Many businesses, especially SMEs, have seen compliance as an afterthought in their overall risk management strategy. However, the compliance sector has significantly grown since the aftermath of the 2007/2008 financial crisis, specifically in the financial industry, as businesses attempt to comply with new regulatory requirements.",
@@ -219,6 +283,20 @@
       "h1": "INTELLECTUAL PROPERTY",
       "h2": ["Understanding IP Protection", "Enforcement Expertise", "Our Expertise in IP Protection"],
       "h3": [],
+      "serviceHighlights": [
+    {
+      "text": "Understanding IP Protection",
+      "anchor": "#understanding-ip-protection"
+    },
+    {
+      "text": "Enforcement Expertise",
+      "anchor": "#enforcement-expertise"
+    },
+    {
+      "text": "Our Expertise in IP Protection",
+      "anchor": "#our-expertise-in-ip-protection"
+    }
+  ],
       "content": [
         "Ensuring the protection of intellectual property (IP) is crucial for any business to ensure its continued success. Over the last few decades, IP infringements have grown from a localized issue to a multibillion-dollar market operated by sophisticated criminal organizations.",
         "Understanding IP Protection",
@@ -270,6 +348,24 @@
       "metaDescription": "VENOVOX's Counter Measures services help businesses detect and remove unauthorized surveillance devices to protect confidential information from being compromised.",
       "h1": "COUNTER MEASURES",
       "h2": ["Understanding TSCM", "Our Expertise", "Why Choose VENOVOX?", "How Can VENOVOX Help"],
+      "serviceHighlights": [
+    {
+      "text": "Understanding TSCM",
+      "anchor": "#understanding-tscm"
+    },
+    {
+      "text": "Our Expertise",
+      "anchor": "#our-expertise"
+    },
+    {
+      "text": "Why Choose VENOVOX?",
+      "anchor": "#why-choose-venovox"
+    },
+    {
+      "text": "How Can VENOVOX Help",
+      "anchor": "#how-can-venovox-help"
+    }
+  ],
       "h3": [],
       "content": [
         "Technical Surveillance Countermeasures (TSCM) may sound quite technical, but in layperson's terms, it simply means bug detection! That's right, WE DO NOT BUG; WE ONLY DEBUG.",
@@ -323,6 +419,32 @@
         "Who is at Risk?",
         "Why VENOVOX?"
       ],
+      "serviceHighlights": [
+    {
+      "text": "Understanding Financial Crime",
+      "anchor": "#understanding-financial-crime"
+    },
+    {
+      "text": "Vulnerabilities to Financial Crime",
+      "anchor": "#vulnerabilities-to-financial-crime"
+    },
+    {
+      "text": "Our Expertise",
+      "anchor": "#our-expertise"
+    },
+    {
+      "text": "Our Services",
+      "anchor": "#our-services"
+    },
+    {
+      "text": "Who is at Risk?",
+      "anchor": "#who-is-at-risk"
+    },
+    {
+      "text": "Why VENOVOX?",
+      "anchor": "#why-venovox"
+    }
+  ],
       "h3": [],
       "content": [
         "Financial crime is the leading phenomenon in both the manual environment and cyberspace. It is a global multibillion-dollar crime that has evolved faster than governments, legislators, businesses, and enforcement agencies can keep up with.",
@@ -381,6 +503,24 @@
         "Workplace Investigation",
         "Professional Employer Organization Services (PEO)"
       ],
+       "serviceHighlights": [
+    {
+      "text": "Optimize Hiring Practices",
+      "anchor": "#optimize-hiring-practices"
+    },
+    {
+      "text": "Background Screening",
+      "anchor": "#background-screening"
+    },
+    {
+      "text": "Workplace Investigation",
+      "anchor": "#workplace-investigation"
+    },
+    {
+      "text": "Professional Employer Organization Services (PEO)",
+      "anchor": "#professional-employer-organization-services-peo"
+    }
+  ],
       "h3": [],
       "content": [
         "In today’s competitive business landscape, building and maintaining a reliable, high-performing workforce is more critical than ever. VENOVOX’s HR Services are designed to support organizations in making smarter hiring decisions, maintaining workplace integrity, and streamlining HR operations. From robust background screening and in-depth workplace investigations to scalable Professional Employer Organization (PEO) solutions, our services empower businesses to protect their reputation, reduce liability, and attract top-tier talent. With a commitment to compliance, discretion, and efficiency, VENOVOX is your trusted partner in shaping a safer, stronger, and more resilient workforce.",
@@ -430,6 +570,24 @@
         "VENOVOX's Key Cyber Security Services",
         "Why Choose VENOVOX Cyber Security Solutions?"
       ],
+      "serviceHighlights": [
+    {
+      "text": "Protecting Your Business from Evolving Cyber Threats",
+      "anchor": "#protecting-your-business-from-evolving-cyber-threats"
+    },
+    {
+      "text": "Comprehensive Cyber Security Solutions",
+      "anchor": "#comprehensive-cyber-security-solutions"
+    },
+    {
+      "text": "VENOVOX's Key Cyber Security Services",
+      "anchor": "#venovoxs-key-cyber-security-services"
+    },
+    {
+      "text": "Why Choose VENOVOX Cyber Security Solutions?",
+      "anchor": "#why-choose-venovox-cyber-security-solutions"
+    }
+  ],
       "h3": [
         "🔸 Network Cyber Security Assessment",
         "🔸 Web Application Cyber Security Assessment",
