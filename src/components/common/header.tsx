@@ -21,11 +21,11 @@ interface SubMenuItem {
 const navData = {
   logo: "/venovox-logo.png",
   menuItems: [
-    { name: "Home", path: "/my-en/background-screening/" },
+    { name: "Home", path: "/my-en/background-screening" },
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",
-      path: "/my-en/background-screening/",
+      path: "/my-en/background-screening/our-services",
       subItems: [
         { name: "Risk Intelligence", path: "/my-en/background-screening/our-services/risk-intelligence/" },
         { name: "Due Diligence", path: "/my-en/background-screening/our-services/due-diligence/" },
@@ -89,12 +89,12 @@ export default function Navbar() {
 
   const handleMenuItemClick = (item: MenuItem) => {
     const hasSubItems = item.subItems && item.subItems.length > 0;
-    
+
     if (hasSubItems) {
       const isOpen = activeSubMenu === item.name;
       setActiveSubMenu(isOpen ? null : item.name);
     } else {
-      // For items without submenus, close the mobile menu
+
       setIsMenuOpen(false);
     }
   };
@@ -109,7 +109,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setActiveSubMenu(null);
-    }, 150); // Small delay to prevent flicker
+    }, 150);
     setHoverTimeout(timeout);
   };
 
@@ -121,7 +121,7 @@ export default function Navbar() {
       animate={controls}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-full">
           {/* Logo - Made Larger */}
           <motion.div
@@ -152,16 +152,15 @@ export default function Navbar() {
             {navData.menuItems.map((item) => {
               const active = isActive(item.path);
               const hasSubItems = item.subItems && item.subItems.length > 0;
-              
+
               return (
                 <div key={item.name} className="relative group/nav">
                   <Link
                     href={item.path}
-                    className={`px-4 py-3 text-lg font-medium rounded-md transition duration-200 flex items-center hover:bg-gray-50 ${
-                      active 
-                        ? "text-red-600 font-semibold border-b-2 border-red-600" 
-                        : "text-gray-800 hover:text-red-600"
-                    }`}
+                    className={`px-4 py-3 text-lg font-medium rounded-md transition duration-200 flex items-center hover:bg-gray-50 ${active
+                      ? "text-red-600 font-semibold border-b-2 border-red-600"
+                      : "text-gray-800 hover:text-red-600"
+                      }`}
                     onMouseEnter={() => hasSubItems && handleMouseEnter(item.name)}
                     onMouseLeave={() => hasSubItems && handleMouseLeave()}
                   >
@@ -171,7 +170,7 @@ export default function Navbar() {
                     )}
                   </Link>
                   {hasSubItems && activeSubMenu === item.name && (
-                    <div 
+                    <div
                       className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
                       onMouseEnter={() => handleMouseEnter(item.name)}
                       onMouseLeave={() => handleMouseLeave()}
@@ -180,11 +179,10 @@ export default function Navbar() {
                         <Link
                           key={sub.name}
                           href={sub.path}
-                          className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${
-                            isActive(sub.path) 
-                              ? "text-red-600 font-medium bg-red-50" 
-                              : "text-gray-700"
-                          }`}
+                          className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
+                            ? "text-red-600 font-medium bg-red-50"
+                            : "text-gray-700"
+                            }`}
                         >
                           {sub.name}
                         </Link>
@@ -232,11 +230,10 @@ export default function Navbar() {
                       // Items with sub-menu - button to toggle
                       <button
                         onClick={() => handleMenuItemClick(item)}
-                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium text-left ${
-                          active
-                            ? "text-red-600 bg-red-50"
-                            : "text-gray-800 hover:bg-gray-50"
-                        }`}
+                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium text-left ${active
+                          ? "text-red-600 bg-red-50"
+                          : "text-gray-800 hover:bg-gray-50"
+                          }`}
                       >
                         <span>{item.name}</span>
                         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -246,11 +243,10 @@ export default function Navbar() {
                       <Link
                         href={item.path}
                         onClick={() => setIsMenuOpen(false)}
-                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${
-                          active
-                            ? "text-red-600 bg-red-50"
-                            : "text-gray-800 hover:bg-gray-50"
-                        }`}
+                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${active
+                          ? "text-red-600 bg-red-50"
+                          : "text-gray-800 hover:bg-gray-50"
+                          }`}
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -269,11 +265,10 @@ export default function Navbar() {
                             key={sub.name}
                             href={sub.path}
                             onClick={() => setIsMenuOpen(false)}
-                            className={`block text-base py-3 px-4 rounded-md ${
-                              isActive(sub.path)
-                                ? "text-red-600 bg-red-50 font-medium"
-                                : "text-gray-700 hover:bg-gray-100"
-                            }`}
+                            className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
+                              ? "text-red-600 bg-red-50 font-medium"
+                              : "text-gray-700 hover:bg-gray-100"
+                              }`}
                           >
                             {sub.name}
                           </Link>
@@ -283,7 +278,7 @@ export default function Navbar() {
                   </div>
                 );
               })}
-              
+
               {/* Contact Button */}
               <div className="pt-4">
                 <Link

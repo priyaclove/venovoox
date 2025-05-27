@@ -24,31 +24,6 @@ export const metadata: Metadata = {
     "talent acquisition, recruitment services, corporate training, employee development, hiring solutions, talent strategy",
 }
 
-// Component for feature card
-// interface FeatureCardProps {
-//   icon: React.ReactNode
-//   title: string
-//   description: string
-//   index: number
-// }
-
-// function FeatureCard({ icon, title, description, index }: FeatureCardProps) {
-//   return (
-//     <div
-//       className="group relative flex flex-col p-6 bg-white rounded-lg shadow-md border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-//       style={{ animationDelay: `${index * 150}ms` }}
-//     >
-//       <div className="p-3 rounded-full bg-gray-100 w-fit mb-4 transition-colors duration-300 group-hover:bg-red-100">
-//         {icon}
-//       </div>
-//       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-//       <p className="text-gray-600 flex-1">{description}</p>
-//       <div className="h-0.5 w-0 bg-red-600 mt-4 transition-all duration-300 group-hover:w-full"></div>
-//     </div>
-//   )
-// }
-
-// Component for approach step
 interface ApproachStepProps {
   number: number
   title: string

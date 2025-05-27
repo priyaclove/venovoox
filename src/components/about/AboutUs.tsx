@@ -20,14 +20,7 @@ export default function AboutUs() {
           transition={{ duration: 0.6 }}
           className="text-center relative"
         >
-          {/* <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            >
-              <Users className="text-gray-200 w-24 h-24" />
-            </motion.div>
-          </div> */}
+
           <h1 className="text-4xl md:text-5xl font-bold text-red-700 mb-4 pt-12">
             <motion.span
               initial={{ opacity: 0 }}
@@ -150,7 +143,6 @@ export default function AboutUs() {
           </div>
         </motion.section>
 
-        {/* Our Services */}
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -174,91 +166,91 @@ export default function AboutUs() {
             </span>
           </h2>
 
-         <div className="grid md:grid-cols-3 gap-8">
-  {/* Expert 1 */}
-  <motion.div
-    initial={{ y: 30, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    viewport={{ once: true, amount: 0.5 }}
-    className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
-  >
-    <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
-     <Image
-  src="/expert.avif"
-  alt="Mr. Rakesh Iyer"
-  width={500} // or any preferred width
-  height={500} // or any preferred height
-  className="w-full h-full object-cover"
-/>
-    </div>
-    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-      Mr. Rakesh Iyer
-    </h3>
-    <p className=" text-justifytext-sm text-gray-500 mb-1">
-      Compliance & Risk Specialist
-    </p>
-    <p className=" text-justifytext-gray-600 text-sm">
-      12+ years in regulatory compliance and forensic auditing across Malaysia & Singapore.
-    </p>
-  </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
 
-  {/* Expert 2 */}
-  <motion.div
-    initial={{ y: 30, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    viewport={{ once: true, amount: 0.5 }}
-    className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
-  >
-    <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
-     <Image
-  alt="Ms. Sarah Lim"
-  src="/expert.avif"
-  width={500} // or any preferred width
-  height={500} // or any preferred height
-  className="w-full h-full object-cover"
-/>
-    </div>
-    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-      Ms. Sarah Lim
-    </h3>
-    <p className=" text-justifytext-sm text-gray-500 mb-1">
-      Talent & Screening Consultant
-    </p>
-    <p className=" text-justifytext-gray-600 text-sm">
-      Expert in executive vetting and psychometric profiling with 10+ years of HR experience.
-    </p>
-  </motion.div>
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                <Image
+                  src="/expert.avif"
+                  alt="Mr. Rakesh Iyer"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Mr. Rakesh Iyer
+              </h3>
+              <p className=" text-justifytext-sm text-gray-500 mb-1">
+                Compliance & Risk Specialist
+              </p>
+              <p className=" text-justifytext-gray-600 text-sm">
+                12+ years in regulatory compliance and forensic auditing across Malaysia & Singapore.
+              </p>
+            </motion.div>
 
-  {/* Expert 3 */}
-  <motion.div
-    initial={{ y: 30, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    viewport={{ once: true, amount: 0.5 }}
-    className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
-  >
-    <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
-   <Image
-  src="/expert.avif"
-alt="Dr. Anjali Menon"
-  width={500} // or any preferred width
-  height={500} // or any preferred height
-  className="w-full h-full object-cover"
-/>
-    </div>
-    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-      Dr. Anjali Menon
-    </h3>
-    <p className=" text-justifytext-sm text-gray-500 mb-1">
-      HR & Organizational Strategy Expert
-    </p>
-    <p className=" text-justifytext-gray-600 text-sm">
-      15+ years in HR strategy, risk reduction, and leadership consulting for global firms.
-    </p>
-  </motion.div>
-</div>
+            {/* Expert 2 */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                <Image
+                  alt="Ms. Sarah Lim"
+                  src="/expert.avif"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Ms. Sarah Lim
+              </h3>
+              <p className=" text-justifytext-sm text-gray-500 mb-1">
+                Talent & Screening Consultant
+              </p>
+              <p className=" text-justifytext-gray-600 text-sm">
+                Expert in executive vetting and psychometric profiling with 10+ years of HR experience.
+              </p>
+            </motion.div>
+
+            {/* Expert 3 */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                <Image
+                  src="/expert.avif"
+                  alt="Dr. Anjali Menon"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Dr. Anjali Menon
+              </h3>
+              <p className=" text-justifytext-sm text-gray-500 mb-1">
+                HR & Organizational Strategy Expert
+              </p>
+              <p className=" text-justifytext-gray-600 text-sm">
+                15+ years in HR strategy, risk reduction, and leadership consulting for global firms.
+              </p>
+            </motion.div>
+          </div>
 
         </motion.section>
 
