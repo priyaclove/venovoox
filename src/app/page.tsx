@@ -1,34 +1,8 @@
-// "use client";
-
-// import CTA from "@/components/common/cta-section";
-// import Features from "@/components/home/features-section";
-// import FindYourNextHire from "@/components/home/find-next-hire-section";
-// import HeroSection from "@/components/home/hero-section";
-// import RecognizedBy from "@/components/home/recognitions-section";
-// import StatsSection from "@/components/home/StatsSection";
-// import Testimonials from "@/components/home/testimonials";
-// import WhyDifferent from "@/components/home/why-venovox-seection";
-
-// export default function Home() {
-//   return (
-//    <>
-//    <HeroSection />
-//    <FindYourNextHire />
-//    <StatsSection />
-//    <RecognizedBy />
-//    < WhyDifferent />
-//    <Features featuresInView={true} />
-//    <Testimonials />
-//    <CTA />
-//    </>
-//   );
-// }
-
 "use client";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ShieldCheck, Globe, Target, Check} from 'lucide-react';
-import RecognizedBy from "@/components/home/recognitions-section"; 
+import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
+import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
 
 
@@ -37,7 +11,7 @@ export default function Home() {
     <main className="bg-white text-black">
       {/* Hero Section */}
       <HeroSection />
-   <RecognizedBy />
+      <RecognizedBy />
 
 
       {/* About Section */}
@@ -62,9 +36,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image 
-                  src="/about-us.jpg" 
-                  alt="VENOVOX Global Team" 
+                <Image
+                  src="/about-us.jpg"
+                  alt="VENOVOX Global Team"
                   fill
                   className="object-cover"
                 />
@@ -85,9 +59,9 @@ export default function Home() {
           >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image 
-                  src="/vector2.png" 
-                  alt="International Standards" 
+                <Image
+                  src="/vector2.png"
+                  alt="International Standards"
                   fill
                   className="object-cover"
                 />
@@ -130,9 +104,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image 
-                  src="/vector1.png" 
-                  alt="Screening Process" 
+                <Image
+                  src="/vector1.png"
+                  alt="Screening Process"
                   fill
                   className="object-cover"
                 />
@@ -154,10 +128,10 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
               Our <span className="text-red-600">Core</span> Principles
             </h2>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {/* Vision */}
-              <motion.div 
+              <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
               >
@@ -171,9 +145,9 @@ export default function Home() {
                   As an ISO 27001-certified company, we connect global security partners to deliver expert ground support and intelligence consulting across APAC and the global region.
                 </p>
               </motion.div>
-              
+
               {/* Mission */}
-              <motion.div 
+              <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
               >
@@ -187,9 +161,9 @@ export default function Home() {
                   We deliver tailored risk management solutions that strengthen resilience, protect operations, and support strategic growth while upholding the highest ethical standards.
                 </p>
               </motion.div>
-              
+
               {/* Values */}
-              <motion.div 
+              <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
               >
