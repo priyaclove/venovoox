@@ -9,6 +9,7 @@ import servicesData from "@/data/our-services.json"
 export default function OurServicesPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [activeCategory, setActiveCategory] = useState("all")
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({})
   const headerRef = useRef(null)
   const isInView = useInView(headerRef, { once: true })
 
@@ -65,10 +66,16 @@ export default function OurServicesPage() {
   }
 
   // Helper function to get image for each service
-const getServiceImage = (serviceId: string, image?: string) => {
-  return image || `/placeholder.svg?height=300&width=400&text=${serviceId.replace(/-/g, " ").toUpperCase()}`
-}
+  const getServiceImage = (serviceId: string, image?: string) => {
+    if (image) {
+      return image.startsWith('/') ? image : `/images/${image}`
+    }
+    return '/images/placeholder.svg'
+  }
 
+  const handleImageError = (serviceId: string) => {
+    setImgErrors(prev => ({ ...prev, [serviceId]: true }))
+  }
 
   return (
     <div className="bg-white">
@@ -76,7 +83,7 @@ const getServiceImage = (serviceId: string, image?: string) => {
       <div className="relative bg-black text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src=""
+            src="/images/services-hero.jpg"
             alt="Our Services"
             fill
             style={{ objectFit: "cover", objectPosition: "center" }}
@@ -167,7 +174,9 @@ const getServiceImage = (serviceId: string, image?: string) => {
             animate="visible"
             exit="hidden"
           >
+
             {filteredServices.map((service) => (
+              console.log(service),
               <motion.div
                 key={service.id}
                 variants={fadeInUp}
@@ -175,10 +184,11 @@ const getServiceImage = (serviceId: string, image?: string) => {
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={getServiceImage(service.id) || "/placeholder.svg"}
+                    src={imgErrors[service.id] ? '/images/placeholder.svg' : getServiceImage(service.id, service.image)}
                     alt={service.title}
                     fill
                     style={{ objectFit: "cover" }}
+                    onError={() => handleImageError(service.id)}
                     className="group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-0 left-0 w-0 h-1 bg-red-600 group-hover:w-full transition-all duration-500"></div>
