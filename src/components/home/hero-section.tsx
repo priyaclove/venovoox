@@ -5,14 +5,15 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section
-      className="relative text-white overflow-hidden min-h-screen flex items-center"
+      className="relative text-white overflow-hidden h-[700px] mt-10 flex items-center "
       style={{
         backgroundImage: "url(/hero.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
+
       }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -25,7 +26,7 @@ const HeroSection = () => {
             <br />
             with Proven Risk {" "}
             <span className="text-white font-extrabold">
-               Intelligence and Background Screening
+              Intelligence and Background Screening
             </span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-4">
