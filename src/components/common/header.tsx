@@ -20,6 +20,7 @@ interface SubMenuItem {
 
 const navData = {
   logo: "/venovox-logo.png",
+  endLogo: "/venovox-logo2.png", // End logo path
   menuItems: [
     { name: "Home", path: "/my-en/background-screening" },
     { name: "About Us", path: "/my-en/about" },
@@ -38,7 +39,7 @@ const navData = {
         { name: "Cyber Security", path: "/my-en/background-screening/our-services/cyber-security/" }
       ]
     },
-    { name: "Contact Us", path: "/my-en/contact-us" },
+    { name: "Contact Us", path: "/my-en/contact-us" }
   ] as MenuItem[]
 };
 
@@ -94,7 +95,6 @@ export default function Navbar() {
       const isOpen = activeSubMenu === item.name;
       setActiveSubMenu(isOpen ? null : item.name);
     } else {
-
       setIsMenuOpen(false);
     }
   };
@@ -147,52 +147,75 @@ export default function Navbar() {
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation - Improved Spacing */}
-          <nav className="hidden lg:flex space-x-6 items-center">
-            {navData.menuItems.map((item) => {
-              const active = isActive(item.path);
-              const hasSubItems = item.subItems && item.subItems.length > 0;
+          {/* Desktop Navigation - Updated to include end logo */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <nav className="flex space-x-6 items-center">
+              {navData.menuItems.map((item) => {
+                const active = isActive(item.path);
+                const hasSubItems = item.subItems && item.subItems.length > 0;
 
-              return (
-                <div key={item.name} className="relative group/nav">
-                  <Link
-                    href={item.path}
-                    className={`px-4 py-3 text-lg font-medium rounded-md transition duration-200 flex items-center hover:bg-gray-50 ${active
-                      ? "text-red-600 font-semibold border-b-2 border-red-600"
-                      : "text-gray-800 hover:text-red-600"
-                      }`}
-                    onMouseEnter={() => hasSubItems && handleMouseEnter(item.name)}
-                    onMouseLeave={() => hasSubItems && handleMouseLeave()}
-                  >
-                    {item.name}
-                    {hasSubItems && (
-                      <ChevronDown size={16} className="ml-1" />
-                    )}
-                  </Link>
-                  {hasSubItems && activeSubMenu === item.name && (
-                    <div
-                      className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
-                      onMouseEnter={() => handleMouseEnter(item.name)}
-                      onMouseLeave={() => handleMouseLeave()}
+                return (
+                  <div key={item.name} className="relative group/nav">
+                    <Link
+                      href={item.path}
+                      className={`px-4 py-3 text-base font-medium transition duration-200 flex items-center hover:bg-gray-50 ${active
+                        ? "text-red-600 font-semibold border-b-2 border-red-600"
+                        : "text-gray-800 hover:text-red-600"
+                        }`}
+                      onMouseEnter={() => hasSubItems && handleMouseEnter(item.name)}
+                      onMouseLeave={() => hasSubItems && handleMouseLeave()}
                     >
-                      {item.subItems?.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.path}
-                          className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
-                            ? "text-red-600 font-medium bg-red-50"
-                            : "text-gray-700"
-                            }`}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                      {item.name}
+                      {hasSubItems && (
+                        <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </Link>
+                    {hasSubItems && activeSubMenu === item.name && (
+                      <div
+                        className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
+                        onMouseEnter={() => handleMouseEnter(item.name)}
+                        onMouseLeave={() => handleMouseLeave()}
+                      >
+                        {item.subItems?.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.path}
+                            className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
+                              ? "text-red-600 font-medium bg-red-50"
+                              : "text-gray-700"
+                              }`}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </nav>
+
+            {/* End Logo */}
+            <motion.div
+              className="flex-shrink-0 flex items-center ml-6"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            >
+              <Link href="/my-en/background-screening" className="flex items-center">
+                <div className="h-16 w-16 relative">
+                  <Image
+                    src={navData.endLogo}
+                    alt="Venovox End Logo"
+                    width={64}
+                    height={64}
+                    className="object-contain w-full h-full"
+                    priority
+                  />
                 </div>
-              );
-            })}
-          </nav>
+              </Link>
+            </motion.div>
+          </div>
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
@@ -278,6 +301,21 @@ export default function Navbar() {
                   </div>
                 );
               })}
+
+              {/* End Logo in Mobile Menu */}
+              <div className="pt-4 pb-2 flex justify-center">
+                <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                  <div className="h-16 w-16 relative">
+                    <Image
+                      src={navData.endLogo}
+                      alt="Venovox End Logo"
+                      width={64}
+                      height={64}
+                      className="object-contain w-full h-full"
+                    />
+                  </div>
+                </Link>
+              </div>
 
               {/* Contact Button */}
               <div className="pt-4">
