@@ -1,20 +1,26 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section
-      className="relative text-white overflow-hidden h-[700px] mt-10 flex items-center "
-      style={{
-        backgroundImage: "url(/hero.webp)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+    <section className="relative text-white overflow-hidden h-[700px] mt-10 flex items-center">
+      {/* Background Image */}
+      <Image
+        height={700}
+        width={2000}
+        src="/hero.webp"
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ objectPosition: '70% center' }}
+      />
 
-      }}
-    >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center">
-        {/* Text Content */}
+      {/* Optional Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
+
+      {/* Content */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center relative z-20">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -24,7 +30,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             Elevate Your <span className="text-red-600">Hiring Strategy</span>
             <br />
-            with Proven Risk {" "}
+            with Proven Risk{" "}
             <span className="text-white font-extrabold">
               Intelligence and Background Screening
             </span>
