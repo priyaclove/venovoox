@@ -314,7 +314,7 @@ export default function ServicePage() {
                 </div>
                 <Link
                   href="/my-en/contact-us"
-                  className="px-8 py-4 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="px-8 py-4 bg-red-600 text-white text-center font-medium hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Request a Consultation
                 </Link>
