@@ -355,51 +355,51 @@
         }
       ]
     },
+{
+  "id": "counter-measures",
+  "title": "Counter Measures",
+  "image": "/count-measure.jpg",
+  "url": "/my-en/background-screening/our-services/counter-measures",
+  "metaTitle": "Counter Measures Services | VENOVOX",
+  "metaDescription": "VENOVOX's Counter Measures services help businesses detect and remove unauthorized surveillance devices to protect confidential information from being compromised.",
+  "h1": "COUNTER MEASURES",
+  "h2": [
+    "Understanding TSCM",
+    "VENOVOX's Expertise"
+  ],
+  "serviceHighlights": [
     {
-      "id": "counter-measures",
-      "title": "Counter Measures",
-      "image": "/count-measure.jpg",
-      "url": "/my-en/background-screening/our-services/counter-measures",
-      "metaTitle": "Counter Measures Services | VENOVOX",
-      "metaDescription": "VENOVOX's Counter Measures services help businesses detect and remove unauthorized surveillance devices to protect confidential information from being compromised.",
-      "h1": "COUNTER MEASURES",
-      "h2": [
-        "Understanding TSCM",
-        "Our Expertise"
-      ],
-      "serviceHighlights": [
-        {
-          "text": "Understanding TSCM",
-          "anchor": "#understanding-tscm"
-        },
-        {
-          "text": "Our Expertise",
-          "anchor": "#our-expertise"
-        }
-      ],
-      "h3": [],
-      "content": [
-        "Technical Surveillance Countermeasures (TSCM) may sound quite technical, but in layperson's terms, it simply means bug detection! That's right, WE DO NOT BUG; WE ONLY DEBUG.",
-        "Understanding TSCM",
-        "TSCM is the original term used by the US Federal Government and refers to the process of bug sweeping or electronic counter-surveillance. TSCM is conducted mainly to identify the presence of technical surveillance devices and vulnerabilities that can prevent unauthorized access.",
-        "Our Expertise",
-        "Venovox has more than a decade of experience in this field. Multinational organizations frequently seek our expertise to detect electronic devices or \"bugs\" in various locations for diverse reasons. Our team of experts uses cutting-edge technology to thoroughly sweep the desired areas and eliminate any electronic surveillance devices that may be present. Our TSCM equipment is designed to protect confidential information from being compromised by employees, competitors, criminals, or even terrorists."
-      ],
-      "internalLinks": [
-        {
-          "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
-        },
-        {
-          "text": "Cyber Security",
-          "url": "/my-en/background-screening/our-services/cyber-security"
-        },
-        {
-          "text": "Intellectual Property",
-          "url": "/my-en/background-screening/our-services/intellectual-property"
-        }
-      ]
+      "text": "Understanding TSCM",
+      "anchor": "#understanding-tscm"
     },
+    {
+      "text": "VENOVOX's Expertise",
+      "anchor": "#venovoxs-expertise"
+    }
+  ],
+  "h3": [],
+  "content": [
+    "Technical Surveillance Countermeasures (TSCM) may sound quite technical, but in layperson's terms, it simply means bug detection! That's right, WE DO NOT BUG; WE ONLY DEBUG.",
+    "Understanding TSCM",
+    "TSCM is the original term used by the US Federal Government and refers to the process of bug sweeping or electronic counter-surveillance. TSCM is conducted mainly to identify the presence of technical surveillance devices and vulnerabilities that can prevent unauthorized access.",
+    "VENOVOX's Expertise",
+    "Venovox has more than a decade of experience in this field. Multinational organizations frequently seek our expertise to detect electronic devices or \"bugs\" in various locations for diverse reasons. Our team of experts uses cutting-edge technology to thoroughly sweep the desired areas and eliminate any electronic surveillance devices that may be present. Our TSCM equipment is designed to protect confidential information from being compromised by employees, competitors, criminals, or even terrorists."
+  ],
+  "internalLinks": [
+    {
+      "text": "Risk Intelligence",
+      "url": "/my-en/background-screening/our-services/risk-intelligence"
+    },
+    {
+      "text": "Cyber Security",
+      "url": "/my-en/background-screening/our-services/cyber-security"
+    },
+    {
+      "text": "Intellectual Property",
+      "url": "/my-en/background-screening/our-services/intellectual-property"
+    }
+  ]
+},
     {
       "id": "financial-crime",
       "title": "Financial Crime",
