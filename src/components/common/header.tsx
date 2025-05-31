@@ -81,12 +81,13 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
+  // Fixed: Remove the body overflow control - let mobile menu handle its own scrolling
+  // useEffect(() => {
+  //   document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
+  //   return () => {
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, [isMenuOpen]);
 
   const handleMenuItemClick = (item: MenuItem) => {
     const hasSubItems = item.subItems && item.subItems.length > 0;
@@ -230,11 +231,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Fixed Navigation */}
+      {/* Mobile Menu - Fixed with proper scrolling */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="lg:hidden bg-white shadow-xl"
+            className="lg:hidden fixed inset-x-0 top-full bg-white shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
