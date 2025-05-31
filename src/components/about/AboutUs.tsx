@@ -159,14 +159,14 @@ export default function AboutUs() {
             </motion.div>
           </div>
 
-          <h2 className="text-3xl font-semibold text-gray-800 mb-10 text-center">
+          {/* <h2 className="text-3xl font-semibold text-gray-800 mb-10 text-center">
             <span className="relative inline-block">
               <span className="relative z-10">MEET OUR EXPERTS</span>
               <span className="absolute bottom-0 left-0 w-full h-2 bg-red-100 z-0 opacity-70 -mb-1"></span>
             </span>
-          </h2>
+          </h2> */}
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
 
             <motion.div
               initial={{ y: 30, opacity: 0 }}
@@ -195,7 +195,6 @@ export default function AboutUs() {
               </p>
             </motion.div>
 
-            {/* Expert 2 */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -223,7 +222,6 @@ export default function AboutUs() {
               </p>
             </motion.div>
 
-            {/* Expert 3 */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -250,7 +248,7 @@ export default function AboutUs() {
                 15+ years in HR strategy, risk reduction, and leadership consulting for global firms.
               </p>
             </motion.div>
-          </div>
+          </div> */}
 
         </motion.section>
 

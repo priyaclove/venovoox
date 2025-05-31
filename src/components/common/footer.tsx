@@ -162,7 +162,7 @@ const Footer = () => {
                   </div>
                 </motion.a>
 
-                <motion.a
+                {/* <motion.a
                   href="mailto:dato.devan@venovox.com"
                   className="flex items-start group"
                   whileHover={{ x: 5 }}
@@ -187,7 +187,7 @@ const Footer = () => {
                      kelly@venovox.com
                     </p>
                   </div>
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
 

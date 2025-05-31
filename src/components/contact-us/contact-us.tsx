@@ -106,7 +106,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
               </p>
 
               <div className="space-y-8">
-                <div className="flex items-start gap-5">
+                {/* <div className="flex items-start gap-5">
                   <div className="p-3 bg-red-700 rounded-lg text-white">
                     <FiMail className="text-xl" />
                   </div>
@@ -121,7 +121,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                     </a>
                     
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-5">
                   <div className="p-3 bg-red-700 rounded-lg text-white">
@@ -196,7 +196,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
                   <div>
                     <label htmlFor="subject" className="block mb-2 font-medium text-gray-700">
-                      Subject <span className="text-red-600">*</span>
+                      Subject
                     </label>
                     <select
                       id="subject"
@@ -218,7 +218,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
                   <div>
                     <label htmlFor="message" className="block mb-2 font-medium text-gray-700">
-                      Message <span className="text-red-600">*</span>
+                      Message 
                     </label>
                     <textarea
                       id="message"
