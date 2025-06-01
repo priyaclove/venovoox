@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Mail, Phone, Send, MapPin } from "lucide-react";
+import { Phone, Send, MapPin } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
