@@ -158,7 +158,6 @@ const Footer = () => {
                     <p className="text-gray-600 text-sm md:text-base group-hover:text-red-600 transition">
                       012 800 8888
                     </p>
-                    <p className="text-gray-400 text-xs">Malaysia Hotline</p>
                   </div>
                 </motion.a>
 
