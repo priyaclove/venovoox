@@ -269,7 +269,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
   <p className="text-gray-600">
     You can also reach us at{" "}
     <a href="tel:+60128008888" className="text-red-700 font-medium hover:underline">
-      +60 12 800 8888
+      +6012 800 8888
     </a>
   </p>
 </div>

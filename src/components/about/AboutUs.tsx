@@ -177,8 +177,8 @@ export default function AboutUs() {
               Ready to Transform Your Hiring?
             </h3>
             <p className=" text-justifytext-red-100 mb-6 max-w-2xl mx-auto">
-              Our experts are ready to discuss your unique needs and craft a
-              solution that drives results.
+             <span className="text-white font-semibold"> Our experts are ready to discuss your unique needs and craft a
+              solution that drives results.</span>
             </p>
             <a
               href="/my-en/contact-us"

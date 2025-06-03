@@ -156,7 +156,7 @@ const Footer = () => {
                   <Phone className="h-5 w-5 text-red-600 mt-0.5 mr-2 group-hover:animate-pulse" />
                   <div>
                     <p className="text-gray-600 text-sm md:text-base group-hover:text-red-600 transition">
-                      +601 2800 8888
+                      +6012 800 8888
                     </p>
                   </div>
                 </motion.a>

@@ -257,7 +257,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
       variants={pageTransition}
     >
       {/* Hero section */}
-      <div className="relative w-full h-[45vh] overflow-hidden">
+      <div className="relative mt-20 w-full h-[45vh] overflow-hidden">
         <Image
           src={getServiceImage(service.id) || "/placeholder.svg"}
           alt={service.title}
