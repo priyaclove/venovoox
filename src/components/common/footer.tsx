@@ -18,52 +18,11 @@ const Footer = () => {
 
   return (
     <>
-      <section className="bg-gray-100 text-white py-16 px-4">
-        <div className="container mx-auto">
-          {/* Social Icons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center gap-20"
-          >
-            {[
-              {
-                icon: <FaFacebookF />,
-                url: "https://www.facebook.com/venovox",
-              },
-              {
-                icon: <FaInstagram />,
-                url: "https://www.instagram.com/venovox/",
-              },
-              {
-                icon: <FaWhatsapp />,
-                url: "https://api.whatsapp.com/send/?phone=%2B60128008888&text&type=phone_number&app_absent=0",
-              },
-              {
-                icon: <FaLinkedinIn />,
-                url: "https://www.linkedin.com/company/venovox/",
-              },
-            ].map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-red-600 text-2xl transition-all duration-300 hover:scale-110"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+
 
       <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 px-6 py-12 md:py-16">
         <div className="max-w-6xl mx-auto">
-          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"> */}
+
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
@@ -143,9 +102,8 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900">
-                Contact Us
-              </h3>
+              <h3 className="text-lg font-semibold text-gray-900">Contact Us</h3>
+
               <div className="space-y-3">
                 <motion.a
                   href="tel:0128008888"
@@ -160,10 +118,48 @@ const Footer = () => {
                     </p>
                   </div>
                 </motion.a>
-
-
               </div>
+
+              {/* Social Icons Below Phone */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="flex gap-6 pt-3"
+              >
+                {[
+                  {
+                    icon: <FaFacebookF />,
+                    url: "https://www.facebook.com/venovox",
+                  },
+                  {
+                    icon: <FaInstagram />,
+                    url: "https://www.instagram.com/venovox/",
+                  },
+                  {
+                    icon: <FaWhatsapp />,
+                    url: "https://api.whatsapp.com/send/?phone=%2B60128008888&text&type=phone_number&app_absent=0",
+                  },
+                  {
+                    icon: <FaLinkedinIn />,
+                    url: "https://www.linkedin.com/company/venovox/",
+                  },
+                ].map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-red-600 text-xl transition-all duration-300 hover:scale-110"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </motion.div>
             </motion.div>
+
 
             {/* Contact Form */}
             <motion.div

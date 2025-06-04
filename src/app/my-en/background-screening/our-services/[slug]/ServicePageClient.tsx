@@ -291,7 +291,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
       {/* Breadcrumb navigation */}
       <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <div className="flex items-center text-sm text-gray-600">
             <Link
               href="/my-en/background-screening"
@@ -312,7 +312,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main content column */}
           <motion.div
@@ -368,7 +368,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <div className="sticky top-8 space-y-8">
+            <div className="sticky top-[170px] space-y-8">
               {/* Service quick info */}
               <div className="bg-gray-50 border border-gray-200 shadow-sm">
                 <div className="bg-red-600 text-white p-4">

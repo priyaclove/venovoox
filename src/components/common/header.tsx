@@ -48,8 +48,15 @@ export default function Navbar() {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const isActive = (path: string) =>
-    pathname === path || (path !== "/" && pathname.startsWith(path));
+  const isActive = (path: string) => {
+    if (path === "/my-en/background-screening") {
+      // Home active only if exact match
+      return pathname === path;
+    } else {
+      // For others, active if pathname starts with path
+      return pathname === path || pathname.startsWith(path + "/");
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -151,7 +158,7 @@ export default function Navbar() {
                 alt="End Logo"
                 width={64}
                 height={64}
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full drop-shadow-xl/25"
                 priority
               />
             </div>
@@ -161,7 +168,7 @@ export default function Navbar() {
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-md text-gray-700 hover:text-red-600"
+              className="p-3 rounded-md text-gray-700 hover:text-red-600 opacity-75 transition"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -172,7 +179,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[100px] bg-white z-[100] shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 top-[100px] bg-white z-[100] shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto mt-[69px]">
           <div className="px-6 pt-4 pb-6 space-y-2">
             {navData.menuItems.map((item) => {
               const active = isActive(item.path);
