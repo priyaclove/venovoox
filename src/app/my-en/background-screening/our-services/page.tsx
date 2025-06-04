@@ -92,7 +92,7 @@ export default function OurServicesPage() {
           <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
 
-        <div className="container mx-auto px-4 py-24 relative z-10">
+        <div className="container mx-auto px-4 py-24 mt-20 relative z-10">
           <motion.div
             ref={headerRef}
             className="max-w-3xl mx-auto text-center"
@@ -151,11 +151,10 @@ export default function OurServicesPage() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    activeCategory === category
-                      ? "bg-red-600 text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  }`}
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${activeCategory === category
+                    ? "bg-red-600 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                    }`}
                 >
                   {category.charAt(0).toUpperCase() + category.slice(1)}
                 </button>
