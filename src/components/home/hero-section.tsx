@@ -27,11 +27,11 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl  font-bold leading-tight mb-6">
             Elevate Your <span className="text-red-600">Hiring Strategy</span>
             <br />
             with Proven Risk{" "}
-            <span className="text-white font-extrabold">
+            <span className="text-4xl  font-bold leading-tight">
               Intelligence and Background Screening
             </span>
           </h1>

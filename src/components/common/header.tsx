@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -20,7 +19,7 @@ interface SubMenuItem {
 
 const navData = {
   logo: "/venovox-logo.png",
-  endLogo: "/venovox-logo2.png", // End logo path
+  endLogo: "/venovox-logo2.png",
   menuItems: [
     { name: "Home", path: "/my-en/background-screening" },
     { name: "About Us", path: "/my-en/about" },
@@ -48,28 +47,9 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
-  const controls = useAnimation();
-  const navRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) =>
     pathname === path || (path !== "/" && pathname.startsWith(path));
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 10;
-      controls.start({
-        height: scrolled ? "80px" : "100px",
-        backgroundColor: "rgba(255, 255, 255, 0.98)",
-        boxShadow: scrolled
-          ? "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-          : "none"
-      });
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -81,29 +61,15 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
-  // Fixed: Remove the body overflow control - let mobile menu handle its own scrolling
-  // useEffect(() => {
-  //   document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
-  //   return () => {
-  //     document.body.style.overflow = "unset";
-  //   };
-  // }, [isMenuOpen]);
-
   const handleMenuItemClick = (item: MenuItem) => {
     const hasSubItems = item.subItems && item.subItems.length > 0;
-
-    if (hasSubItems) {
-      const isOpen = activeSubMenu === item.name;
-      setActiveSubMenu(isOpen ? null : item.name);
-    } else {
-      setIsMenuOpen(false);
-    }
+    const isOpen = activeSubMenu === item.name;
+    setActiveSubMenu(hasSubItems ? (isOpen ? null : item.name) : null);
+    if (!hasSubItems) setIsMenuOpen(false);
   };
 
   const handleMouseEnter = (itemName: string) => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-    }
+    if (hoverTimeout) clearTimeout(hoverTimeout);
     setActiveSubMenu(itemName);
   };
 
@@ -115,40 +81,22 @@ export default function Navbar() {
   };
 
   return (
-    <motion.header
-      ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm"
-      initial={{ height: "100px", backgroundColor: "rgba(255, 255, 255, 0.98)" }}
-      animate={controls}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-    >
-      <div className="container mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="flex justify-between items-center h-full">
-          {/* Logo - Made Larger */}
-          <motion.div
-            className="flex-shrink-0 flex items-center"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <Link href="/" className="flex items-center">
-              <div className="h-20 w-20 relative">
-                <Image
-                  src={navData.logo}
-                  alt="Venovox Logo"
-                  width={80}
-                  height={80}
-                  className="object-contain w-full h-full"
-                  priority
-                />
-              </div>
-              <span className="ml-3 text-xl font-bold text-gray-800 hidden md:block">
-                Venovox
-              </span>
-            </Link>
-          </motion.div>
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-center h-[100px]">
+          {/* Left Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src={navData.logo}
+              alt="Main Logo"
+              width={125}
+              height={125}
+              priority
+              className="drop-shadow-xl/25"
+            />
+          </Link>
 
-          {/* Desktop Navigation - Updated to include end logo */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex space-x-6 items-center">
               {navData.menuItems.map((item) => {
@@ -159,7 +107,7 @@ export default function Navbar() {
                   <div key={item.name} className="relative group/nav">
                     <Link
                       href={item.path}
-                      className={`px-4 py-3 text-base font-medium transition duration-200 flex items-center hover:bg-gray-50 ${active
+                      className={`px-4 py-3 text-base font-medium flex items-center hover:bg-gray-50 transition ${active
                         ? "text-red-600 font-semibold border-b-2 border-red-600"
                         : "text-gray-800 hover:text-red-600"
                         }`}
@@ -167,9 +115,7 @@ export default function Navbar() {
                       onMouseLeave={() => hasSubItems && handleMouseLeave()}
                     >
                       {item.name}
-                      {hasSubItems && (
-                        <ChevronDown size={16} className="ml-1" />
-                      )}
+                      {hasSubItems && <ChevronDown size={16} className="ml-1" />}
                     </Link>
                     {hasSubItems && activeSubMenu === item.name && (
                       <div
@@ -195,34 +141,27 @@ export default function Navbar() {
                 );
               })}
             </nav>
-
-            {/* End Logo */}
-            <motion.div
-              className="flex-shrink-0 flex items-center ml-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            >
-              <Link href="/my-en/background-screening" className="flex items-center">
-                <div className="h-16 w-16 relative">
-                  <Image
-                    src={navData.endLogo}
-                    alt="Venovox End Logo"
-                    width={64}
-                    height={64}
-                    className="object-contain w-full h-full"
-                    priority
-                  />
-                </div>
-              </Link>
-            </motion.div>
           </div>
+
+          {/* Right Logo */}
+          <Link href="/my-en/background-screening" className="hidden lg:block">
+            <div className="h-16 w-16 relative">
+              <Image
+                src={navData.endLogo}
+                alt="End Logo"
+                width={64}
+                height={64}
+                className="object-contain w-full h-full"
+                priority
+              />
+            </div>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-md text-gray-700 hover:text-red-600 focus:outline-none"
+              className="p-3 rounded-md text-gray-700 hover:text-red-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -231,107 +170,86 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Fixed with proper scrolling */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="lg:hidden fixed inset-x-0 top-full bg-white shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="px-6 pt-4 pb-6 space-y-2">
-              {navData.menuItems.map((item) => {
-                const active = isActive(item.path);
-                const isOpen = activeSubMenu === item.name;
-                const hasSubItems = item.subItems && item.subItems.length > 0;
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-x-0 top-[100px] bg-white z-[100] shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto">
+          <div className="px-6 pt-4 pb-6 space-y-2">
+            {navData.menuItems.map((item) => {
+              const active = isActive(item.path);
+              const isOpen = activeSubMenu === item.name;
+              const hasSubItems = item.subItems && item.subItems.length > 0;
 
-                return (
-                  <div key={item.name} className="border-b border-gray-100 last:border-0">
-                    {/* Main Menu Item */}
-                    {hasSubItems ? (
-                      // Items with sub-menu - button to toggle
-                      <button
-                        onClick={() => handleMenuItemClick(item)}
-                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium text-left ${active
-                          ? "text-red-600 bg-red-50"
-                          : "text-gray-800 hover:bg-gray-50"
-                          }`}
-                      >
-                        <span>{item.name}</span>
-                        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                      </button>
-                    ) : (
-                      // Items without sub-menu - direct link
-                      <Link
-                        href={item.path}
-                        onClick={() => setIsMenuOpen(false)}
-                        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${active
-                          ? "text-red-600 bg-red-50"
-                          : "text-gray-800 hover:bg-gray-50"
-                          }`}
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    )}
+              return (
+                <div key={item.name} className="border-b border-gray-100">
+                  {hasSubItems ? (
+                    <button
+                      onClick={() => handleMenuItemClick(item)}
+                      className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${active ? "text-red-600 bg-red-50" : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                    >
+                      <span>{item.name}</span>
+                      {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`w-full block px-4 py-4 rounded-lg text-lg font-medium ${active ? "text-red-600 bg-red-50" : "text-gray-800 hover:bg-gray-50"
+                        }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
 
-                    {/* Sub Menu Items */}
-                    {hasSubItems && isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="pl-6 space-y-2 py-2"
-                      >
-                        {item.subItems?.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.path}
-                            onClick={() => setIsMenuOpen(false)}
-                            className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
-                              ? "text-red-600 bg-red-50 font-medium"
-                              : "text-gray-700 hover:bg-gray-100"
-                              }`}
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </div>
-                );
-              })}
+                  {hasSubItems && isOpen && (
+                    <div className="pl-6 space-y-2 py-2">
+                      {item.subItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
+                            ? "text-red-600 bg-red-50 font-medium"
+                            : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
 
-              {/* End Logo in Mobile Menu */}
-              <div className="pt-4 pb-2 flex justify-center">
-                <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                  <div className="h-16 w-16 relative">
-                    <Image
-                      src={navData.endLogo}
-                      alt="Venovox End Logo"
-                      width={64}
-                      height={64}
-                      className="object-contain w-full h-full"
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              {/* Contact Button */}
-              <div className="pt-4">
-                <Link
-                  href="/my-en/contact-us"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block w-full text-center px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition duration-200"
-                >
-                  Contact Us
-                </Link>
-              </div>
+            {/* End Logo in Mobile Menu */}
+            <div className="pt-4 pb-2 flex justify-center">
+              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                <div className="h-16 w-16 relative">
+                  <Image
+                    src={navData.endLogo}
+                    alt="End Logo"
+                    width={64}
+                    height={64}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+
+            {/* Contact Button */}
+            <div className="pt-4">
+              <Link
+                href="/my-en/contact-us"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-center px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

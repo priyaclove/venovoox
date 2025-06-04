@@ -1,11 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { 
-  FiPhone, 
-  FiSend, 
-  FiCheckCircle, 
-  FiClock, 
+import {
+  FiPhone,
+  FiSend,
+  FiCheckCircle,
+  FiClock,
 } from "react-icons/fi";
 
 
@@ -18,21 +19,21 @@ const ContactUs = () => {
     message: ""
   });
 
- const handleInputChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
-  const { name, value } = e.target;
-  setFormValues(prev => ({
-    ...prev,
-    [name]: value
-  }));
-};
-const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormValues(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setFormStatus("sending");
-    
+
     // Simulate form submission
     setTimeout(() => {
       setFormStatus("success");
@@ -58,32 +59,47 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
             We&lsquo;re here to help
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Contact Us
-          </h1>
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight"
+            >
+              <span className="text-red-600">Contact</span>   Us</motion.h2>
 
-          <p className="text-xl max-w-2xl mx-auto text-gray-700 mb-12">
-            Get in touch with our expert team for personalized assistance and premium support
-          </p>
-      <div className="flex flex-wrap justify-center gap-6">
-  {/* Send Message Button */}
-  <button
-  onClick={openWhatsApp}
-      className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
-  >
-    <FiSend className="text-lg" />
-    Send Message
-  </button>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4 rounded-full" />
 
-  {/* Call Us Button */}
-  <a
-    href="tel:+60128008888"
-    className="flex items-center gap-2 px-6 py-3 bg-white text-red-700 border-2 border-red-700 font-bold rounded-lg hover:bg-red-50 transition-colors"
-  >
-    <FiPhone className="text-lg" />
-    Call Us
-  </a>
-</div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
+            >
+              Get in touch with our expert team for personalized assistance and premium support
+            </motion.p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            {/* Send Message Button */}
+            <button
+              onClick={openWhatsApp}
+              className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
+            >
+              <FiSend className="text-lg" />
+              Send Message
+            </button>
+
+            {/* Call Us Button */}
+            <a
+              href="tel:+60128008888"
+              className="flex items-center gap-2 px-6 py-3 bg-white text-red-700 border-2 border-red-700 font-bold rounded-lg hover:bg-red-50 transition-colors"
+            >
+              <FiPhone className="text-lg" />
+              Call Us
+            </a>
+          </div>
         </div>
       </section>
 
@@ -96,31 +112,16 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
               <h2 className="text-3xl font-bold mb-4 text-red-700">
                 Reach Out To Us
               </h2>
-              
+
               <div className="w-20 h-1 bg-red-700 mb-8"></div>
 
               <p className="text-lg text-gray-600 mb-10">
-                Our dedicated team is ready to assist you with any inquiries or support needs. 
+                Our dedicated team is ready to assist you with any inquiries or support needs.
                 We pride ourselves on prompt, professional service.
               </p>
 
               <div className="space-y-8">
-                {/* <div className="flex items-start gap-5">
-                  <div className="p-3 bg-red-700 rounded-lg text-white">
-                    <FiMail className="text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1 text-black">Email</h3>
-                    <p className="text-gray-600 mb-1">For general inquiries:</p>
-                    <a 
-                      href="mailto:dato.devan@venovox.com" 
-                      className="text-red-700 hover:underline"
-                    >
-                      dato.devan@venovox.com
-                    </a>
-                    
-                  </div>
-                </div> */}
+
 
                 <div className="flex items-start gap-5">
                   <div className="p-3 bg-red-700 rounded-lg text-white">
@@ -129,11 +130,11 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
                   <div>
                     <h3 className="text-lg font-semibold mb-1 text-black">Phone</h3>
                     <p className="text-gray-600 mb-1">Customer support:</p>
-                    <a 
-                      href="tel:+60378000088" 
+                    <a
+                      href="tel:+60378000088"
                       className="text-red-700 hover:underline"
                     >
-                +603 7800 0088
+                      +603 7800 0088
                     </a>
                   </div>
                 </div>
@@ -158,7 +159,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
               <h2 className="text-2xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
               <p className="text-gray-600 mb-6">We&lsquo;ll get back to you as soon as possible</p>
-              
+
               {formStatus === "idle" && (
                 <form className="space-y-5" onSubmit={handleSubmit}>
                   <div>
@@ -217,7 +218,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
                   <div>
                     <label htmlFor="message" className="block mb-2 font-medium text-gray-700">
-                      Message 
+                      Message
                     </label>
                     <textarea
                       id="message"
@@ -245,7 +246,7 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
               {formStatus === "sending" && (
                 <div className="h-80 flex flex-col items-center justify-center text-center">
-                  <div 
+                  <div
                     className="w-12 h-12 border-4 border-gray-200 border-t-red-700 rounded-full mb-6"
                     style={{ animation: "spin 1s linear infinite" }}
                   />
@@ -265,115 +266,26 @@ const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
               )}
 
               <div className="mt-10 text-center border-t pt-6">
-  <h3 className="text-lg font-semibold text-gray-900 mb-2">Or Call Us Directly</h3>
-  <p className="text-gray-600">
-    You can also reach us at{" "}
-    <a href="tel:+60128008888" className="text-red-700 font-medium hover:underline">
-      +6012 800 8888
-    </a>
-  </p>
-</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Prefer to speak with someone?
+                </h3>
+                <p className="text-gray-600">
+                  Call us directly at{" "}
+                  <a href="tel:+60128008888" className="text-red-700 font-medium hover:underline">
+                    +6012 800 8888
+                  </a>
+                  , we&apos;re here to help!
+                </p>
+              </div>
+
 
             </div>
-            
+
           </div>
         </div>
       </section>
 
- {/* Global Presence */}
-{/* <section className="py-16 bg-gray-50">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <div className="inline-block mb-4">
-        <div className="p-2 bg-red-100 text-red-700 rounded-full">
-          <FiGlobe className="text-xl" />
-        </div>
-      </div>
-      <h2 className="text-3xl font-bold mb-4 text-gray-900">
-        Our Global Presence
-      </h2>
-      <div className="w-20 h-1 bg-red-700 mx-auto mb-6"></div>
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        We operate in major business hubs around the world to provide you with localized support
-      </p>
-    </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-        {
-          city: "Houston",
-          country: "US & Canada",
-          address: "3050 Post Oak Blvd, Suite 510, Houston, Texas 77056",
-          phone: "281 766 5055"
-        },
-        {
-          city: "Singapore",
-          country: "Singapore",
-          address: "1 Scotts Road, #24-10, Shaw Centre, 228208 Singapore",
-          phone: "6303 0529"
-        },
-        {
-          city: "Selangor",
-          country: "Malaysia",
-          address: "E-7-03, Block E, Oasis Square, No 2, Jalan PJU 1A/7, Ara Damansara, 47301 Selangor",
-          phone: "03 7800 0088"
-        },
-        {
-          city: "Dubai",
-          country: "UAE",
-          address: "Level 03, Boulevard Plaza Tower 1, Sheikh Mohammed Bin Rashid Boulevard, Downtown Dubai, P.O. Box 334155",
-          phone: "04 368 0972"
-        }
-      ].map((office, index) => (
-        <div
-          key={index}
-          className="bg-white p-5 rounded-lg shadow-md border border-gray-100  text-justify"
-        >
-          <div className="w-10 h-10 bg-red-100 text-red-700 rounded-lg flex items-center justify-center mb-4">
-            <FiMapPin className="text-lg" />
-          </div>
-          <h3 className="text-lg font-bold mb-1 text-gray-900">{office.city}</h3>
-          <p className="text-red-700 font-medium mb-3">{office.country}</p>
-          <p className="text-gray-600 mb-1">{office.address}</p>
-          <p className="text-gray-600">{office.phone}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section> */}
-
-
-      {/* Map Section */}
-      {/* <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-center text-gray-900">
-            Find Our Headquarters
-          </h2>
-
-          <div className="w-20 h-1 bg-red-700 mx-auto mb-12"></div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200 h-80">
-            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FiMapPin className="text-white text-lg" />
-                </div>
-                <p className="text-gray-700 font-medium">Interactive Map Will Be Displayed Here</p>
-                <p className="text-sm text-gray-500 mt-2">123 Business Avenue, New York, NY 10001</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
-            >
-              View on Google Maps
-            </a>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

@@ -16,8 +16,8 @@ export default function Home() {
 
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="py-20 px-6 bg-gray-50">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,8 +50,8 @@ export default function Home() {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,10 +71,10 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Rooted in <span className="text-red-600">Local Expertise</span>, Driven by <span className="text-red-600">International Standards</span>
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 text-lg mb-4">
                   With its business initiated in Malaysia back in 1999, today, VENOVOX is headquartered in Texas, USA. VENOVOX has become a trusted leader in risk management solutions and background screening services.
                 </p>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-lg">
                   We specialize in identifying, assessing, authenticating, and mitigating risks to people, assets, operations, and reputations.
                 </p>
               </div>
@@ -84,8 +84,8 @@ export default function Home() {
       </section>
 
       {/* Screening Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6  bg-gray-50">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,10 +97,10 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Your Trusted Experts in <span className="text-red-600">Background Screening</span> and <span className="text-red-600">Risk Solutions</span>
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 text-lg mb-4">
                   Our heightened screening process delivers accurate background check results with a quicker turnaround time, ensuring efficiency without compromising its quality.
                 </p>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-lg">
                   With a seamless and stress-free experience, you can rely on our proven track record of accuracy and timeliness to support your hiring and authentication needs.
                 </p>
               </div>
@@ -118,8 +118,8 @@ export default function Home() {
       </section>
 
       {/* Vision, Mission, Values */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6  bg-white">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
