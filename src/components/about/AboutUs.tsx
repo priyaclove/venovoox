@@ -12,43 +12,32 @@ import Image from "next/image";
 export default function AboutUs() {
   return (
     <div className="bg-white text-gray-900 px-6 py-24 overflow-hidden">
-      <div className="max-w-6xl mx-auto space-y-24 relative ">
+      <div className="container mx-auto space-y-24 relative ">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center relative"
-        >
-
-          <h1 className="text-4xl md:text-5xl font-bold text-red-700 mb-4 pt-12">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="block"
-            >
-              Hiring Made <span className="text-gray-800">Smooth</span>
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="block"
-            >
-              & <span className="text-gray-800">Transparent</span>
-            </motion.span>
-          </h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 mt-20">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold text-black tracking-tight"
           >
-            Empowering businesses with streamlined, trustworthy hiring and
-            advisory services.
+            <span className="text-red-600">Hiring Made</span> Smooth
+            & Transparent </motion.h2>
+
+          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4 rounded-full" />
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
+          >
+            Empowering businesses with streamlined, trustworthy hiring and advisory services.
           </motion.p>
-        </motion.div>
+        </div>
+
 
         {/* Our Story */}
         <motion.section
@@ -177,8 +166,8 @@ export default function AboutUs() {
               Ready to Transform Your Hiring?
             </h3>
             <p className=" text-justifytext-red-100 mb-6 max-w-2xl mx-auto">
-             <span className="text-white font-semibold"> Our experts are ready to discuss your unique needs and craft a
-              solution that drives results.</span>
+              <span className="text-white font-semibold"> Our experts are ready to discuss your unique needs and craft a
+                solution that drives results.</span>
             </p>
             <a
               href="/my-en/contact-us"

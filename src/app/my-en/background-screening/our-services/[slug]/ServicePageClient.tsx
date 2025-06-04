@@ -176,9 +176,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         return (
           <div
             key={index}
-            className={`flex items-start mb-3 group ${
-              isIndented ? "ml-6" : ""
-            }`}
+            className={`flex items-start mb-3 group ${isIndented ? "ml-6" : ""
+              }`}
           >
             <span className="text-red-600 mr-3 mt-1 transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
               {cleanItem.substring(0, 1)}
@@ -197,9 +196,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         return (
           <div
             key={index}
-            className={`flex items-start mb-4 group ${
-              isIndented ? "ml-6" : ""
-            }`}
+            className={`flex items-start mb-4 group ${isIndented ? "ml-6" : ""
+              }`}
           >
             <span className="text-xl mr-3 mt-0.5 flex-shrink-0">{emoji}</span>
             <p className="text-gray-800 font-medium leading-relaxed">
@@ -216,7 +214,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
           <h2
             key={index}
             id={anchorId}
-            className="text-2xl font-bold mt-8 mb-4 text-gray-900 scroll-mt-24"
+            className="text-2xl font-bold mt-8 mb-4 text-gray-900 scroll-mt-42"
           >
             {item}
           </h2>
