@@ -28,7 +28,7 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-lg text-gray-700 text-justify mb-6 ">
+                <p className="text-lg text-gray-700 text-justify  mb-6 ">
                   VENOVOX is a premier risk management and background screening consultancy that provides specialised services in due diligence, security advisory, background checks, and intelligence analysis throughout Malaysia, the Asia-Pacific regions, and globally.
                 </p>
                 <p className="text-lg text-gray-700 text-justify ">

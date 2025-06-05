@@ -197,7 +197,7 @@ export default function OurServicesPage() {
                   <h2 className="text-2xl font-bold mb-3 text-black group-hover:text-red-600 transition-colors">
                     {service.title}
                   </h2>
-                  <p className="text-gray-700 mb-6 flex-grow">
+                  <p className="text-gray-700 mb-6 flex-grow text-justify">
                     {service.metaDescription.length > 120
                       ? `${service.metaDescription.substring(0, 120)}...`
                       : service.metaDescription}

@@ -260,7 +260,7 @@ const Footer = () => {
               },
               {
                 title: "Singapore",
-                company: "Venovox Pte. Ltd.",
+                company: "Venovox Pte Ltd",
                 lines: [
                   "1 Scotts Road,",
                   "#24-10,",
@@ -284,7 +284,7 @@ const Footer = () => {
                   "Oasis Square,",
                   "No 2, Jalan PJU 1A/7,",
                   "Ara Damansara,",
-                  "47301 Selangor",
+                  "47301 Petaling Jaya Selangor",
                   <a
                     key="phone"
                     href="tel:0378000088"
@@ -297,7 +297,7 @@ const Footer = () => {
 
               {
                 title: "UAE",
-                company: "Venovox Pvt. Ltd.",
+                company: "Venovox Pvt Ltd",
                 lines: [
                   "Level 03,",
                   "Boulevard Plaza Tower 1",
