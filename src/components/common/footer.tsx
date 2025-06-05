@@ -239,7 +239,7 @@ const Footer = () => {
             Our Offices
           </motion.h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-left pb-6 ">
             {[
               {
                 title: "US & Canada",
@@ -290,10 +290,11 @@ const Footer = () => {
                     href="tel:0378000088"
                     className="hover:text-red-600 transition block mt-1"
                   >
-                    📞 +60 3 7800 0088
+                    📞  +603 7800 0088
                   </a>,
                 ],
               },
+
               {
                 title: "UAE",
                 company: "Venovox Pvt. Ltd.",
@@ -345,11 +346,19 @@ const Footer = () => {
           </div>
 
           {/* Footer Bottom */}
-          <div className=" text-center text-sm text-gray-500 content text-justify">
+          <div className="flex flex-wrap justify-between items-center border-t border-gray-200 pt-6 text-sm text-gray-500">
             <p>© {new Date().getFullYear()} Venovox. All rights reserved.</p>
+            <div className="flex flex-wrap gap-4">
+              <a href="/privacy/term-and-conditions" className="hover:underline">Terms & Conditions</a>
+              <a href="/privacy/privacy-policy" className="hover:underline">Privacy Policy</a>
+              <a href="/privacy/security-policy" className="hover:underline">Security Policy</a>
+              <a href="/privacy/whistleblowing-policy" className="hover:underline">Whistleblowing Policy</a>
+            </div>
           </div>
+
+
         </div>
-      </footer>
+      </footer >
     </>
   );
 };

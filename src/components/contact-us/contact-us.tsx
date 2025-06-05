@@ -78,7 +78,11 @@ const ContactUs = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
             >
-              Get in touch with our expert team for personalized assistance and premium support
+              <span className="text-center text-base text-gray-700">
+                Get in touch with our expert team for personalized assistance
+                <br />
+                and premium support
+              </span>
             </motion.p>
           </div>
           <div className="flex flex-wrap justify-center gap-6">
