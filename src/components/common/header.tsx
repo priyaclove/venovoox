@@ -99,7 +99,7 @@ export default function Navbar() {
               width={125}
               height={125}
               priority
-              className="drop-shadow-xl/25"
+              className=""
             />
           </Link>
 
@@ -158,7 +158,7 @@ export default function Navbar() {
                 alt="End Logo"
                 width={64}
                 height={64}
-                className="object-contain w-full h-full drop-shadow-xl/25"
+                className="object-contain w-full h-full "
                 priority
               />
             </div>
