@@ -34,7 +34,10 @@ export default function AboutUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
           >
-            Empowering businesses with streamlined, trustworthy hiring and advisory services.
+            <span>
+              Empowering businesses with streamlined, trustworthy hiring <br /> and advisory services.
+            </span>
+
           </motion.p>
         </div>
 
