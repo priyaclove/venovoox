@@ -393,7 +393,7 @@ export default function OurServicesPage() {
               >
                 <div className="flex justify-center mb-6">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-black">{feature.title}</h3>
-                <p className="text-gray-700">{feature.description}</p>
+                <p className="text-gray-700 text-justify">{feature.description}</p>
               </motion.div>
             ))}
           </div>
