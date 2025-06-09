@@ -348,7 +348,7 @@ const Footer = () => {
           {/* Footer Bottom */}
           <div className="flex flex-col md:flex-row md:justify-between items-center border-t border-gray-200 pt-6 text-sm text-gray-500 gap-4 md:gap-0 text-center md:text-left">
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <a href="/privacy/term-and-conditions" className="hover:underline">Terms & Conditions</a>
+              <a href="/privacy/terms-and-conditions" className="hover:underline">Terms & Conditions</a>
               <a href="/privacy/privacy-policy" className="hover:underline">Privacy Policy</a>
               <a href="/privacy/security-policy" className="hover:underline">Security Policy</a>
               <a href="/privacy/whistleblowing-policy" className="hover:underline">Whistleblowing Policy</a>

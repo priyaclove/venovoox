@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
                 </p>
 
                 <p className="mb-4">
-                    In compliance with Malaysia &apos; s Personal Data Protection Act 2010 (PDPA), any personal data provided by companies or individuals will be protected in accordance with the Act.
+                    In compliance with Malaysia&apos;s Personal Data Protection Act 2010 (PDPA), any personal data provided by companies or individuals will be protected in accordance with the Act.
                 </p>
 
                 <p className="mb-4">
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
                 <p className="mb-2">1.2. <strong>Usage Information:</strong> IP address, browser type, OS, etc.</p>
                 <p className="mb-2">1.3. <strong>Cookies:</strong> Used to collect browsing data; managed via browser settings.</p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">Information Collected</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-2">Information Not Collected</h2>
                 <p className="mb-4">
                     No personal information is collected while you browse unless submitted through forms or emails.
                 </p>
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
                     We are not responsible for the privacy practices of third-party websites. Please review their policies individually.
                 </p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">Children &apos;s Privacy</h2>
+                <h2 className="text-xl font-semibold mt-6 mb-2">Children&apos;s Privacy</h2>
                 <p className="mb-4">
                     We do not knowingly collect data from children under 13. If found, the data will be deleted.
                 </p>
