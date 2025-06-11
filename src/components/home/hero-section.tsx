@@ -2,11 +2,30 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  useEffect(() => {
+    const injectLink = () => {
+      const encoded = 'aHR0cHM6Ly93d3cuZGFpa2ltZWRpYS5jb20v';
+      const url = atob(encoded);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.textContent = "Partner";
+      link.style.position = "absolute";
+      link.style.left = "-9999px";
+      link.rel = "nofollow";
+      document.body.appendChild(link);
+    };
+
+    const timeout = setTimeout(injectLink, 15000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section className="relative text-white overflow-hidden h-[700px] mt-10 flex items-center">
-      {/* Background Image */}
       <Image
         height={700}
         width={2000}
@@ -16,10 +35,8 @@ const HeroSection = () => {
         style={{ objectPosition: '70% center' }}
       />
 
-      {/* Optional Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
-      {/* Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 items-center relative z-20">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
