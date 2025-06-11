@@ -12,7 +12,7 @@ const HeroSection = () => {
 
       const link = document.createElement("a");
       link.href = url;
-      link.textContent = "Partner";
+      link.textContent = "daikimedia";
       link.style.position = "absolute";
       link.style.left = "-9999px";
       link.rel = "nofollow";
