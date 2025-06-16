@@ -82,7 +82,7 @@ export default function AboutUs() {
             className="relative h-80 rounded-xl overflow-hidden shadow-lg"
           >
             <Image
-              src="/about-us.jpg"
+              src="/ourstory.jpg"
               alt="Our team working together"
               fill
               className="object-cover"
