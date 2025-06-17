@@ -32,7 +32,7 @@ const VenovoxHero = () => {
 
                     {/* Image */}
                     <Image
-                        src="/career.png" // Replace with your actual image path
+                        src="/career1.jpg" // Replace with your actual image path
                         alt="Career Banner"
                         width={500}
                         height={300}
