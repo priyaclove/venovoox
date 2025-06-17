@@ -1,0 +1,65 @@
+import React from 'react';
+import Image from 'next/image';
+
+const cardData = [
+    {
+        image: '/grow1.png',
+        title: 'Comprehensive training to sharpen your skills',
+        description: `Empower yourself with targeted, hands-on training designed to elevate your expertise and boost your confidence. Whether you're enhancing technical know-how, leadership capabilities, or analytical thinking, our comprehensive programs offer the real-world demand. Learn from experienced professionals, engage in practical sessions, and walk away with sharpened skills that make an impact.`,
+    },
+    {
+        image: '/grow2.png',
+        title: 'Career advancement opportunities in a growing industry',
+        description: `Step into a future filled with potential. As industries evolve and expand, new doors are opening for professionals eager to grow. Whether you're entering the field or climbing to the next rung on your career ladder, this is your moment to seize. With a rapidly growing industry, the opportunities for advancement in this thriving sector are vast and rewarding.`,
+    },
+    {
+        image: '/grow3.png',
+        title: 'A chance to work with a diverse, international team',
+        description: `Experience the power of global collaboration. Working with a team of professionals from different backgrounds, cultures, and perspectives not only broadens how we view problems but also enhances creativity, problem-solving, and innovation. At VENOVOX, you're not just part of a team — united by shared goals and diverse strengths.`,
+    },
+    {
+        image: '/grow4.png',
+        title: 'On-the-job expert training',
+        description: `Gain practical knowledge where it matters most — on the job. With hands-on experience from seasoned professionals and real-world problem solving, our approach prioritizes growth and development. This real-world experience that VENOVOX provides helps bridge the gap between training and results in not just learning, but mastering application in a real work environment.`,
+    },
+];
+
+const GrowWithUsSection = () => {
+    return (
+        <section className="bg-white  text-black">
+            <div className="container mx-auto  py-16 px-6 space-y-12">
+                {/* Heading */}
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
+                    Grow with Us, Globally!
+                </h2>
+
+                {/* Grid */}
+                <div className="grid md:grid-cols-2 gap-10">
+                    {cardData.map((card, idx) => (
+                        <div key={idx} className="space-y-4">
+                            {/* Image + overlay title */}
+                            <div className="relative  overflow-hidden h-84">
+                                <Image
+                                    src={card.image}
+                                    alt={card.title}
+                                    fill
+                                    className="object-cover"
+                                />
+
+                                <h3 className="text-lg md:text-2xl bottom-4 absolute left-4 font-semibold text-white">{card.title}</h3>
+
+                            </div>
+
+                            {/* Description */}
+                            <p className="text-base md:text-lg text-black text-justify">
+                                {card.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default GrowWithUsSection;
