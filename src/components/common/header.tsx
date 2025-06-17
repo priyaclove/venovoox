@@ -38,7 +38,8 @@ const navData = {
         { name: "Cyber Security", path: "/my-en/background-screening/our-services/cyber-security/" }
       ]
     },
-    { name: "Contact Us", path: "/my-en/contact-us" }
+    { name: "Contact Us", path: "/my-en/contact-us" },
+    { name: "Career", path: "/my-en/Career" }
   ] as MenuItem[]
 };
 
