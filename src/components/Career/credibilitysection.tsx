@@ -32,13 +32,13 @@ const VenovoxCredibilitySection = () => {
 
                         {/* Right Image */}
                         <div>
-                            <div className="aspect-[4/3] overflow-hidden rounded-md">
+                            <div className="aspect-[4/3] overflow-hidden ">
                                 <Image
-                                    src="/join-us.png"
-                                    height={600}
-                                    width={800}
+                                    src="/join-us2.jpg"
+                                    height={500}
+                                    width={600}
                                     alt="Handshake with Tech Overlay"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-[450px] object-cover"
                                 />
                             </div>
                         </div>
