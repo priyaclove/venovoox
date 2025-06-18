@@ -5,7 +5,7 @@ const VenovoxHero = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="bg-black text-white h-[85vh] flex items-center justify-center px-6 py-16">
+            <div className="bg-black text-white h-[70vh] flex items-center justify-center px-6 py-16 mt-20">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-semibold mb-8">
                         Shape The Future Of Trust – Join Our Team!
