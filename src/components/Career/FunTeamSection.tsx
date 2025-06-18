@@ -34,7 +34,7 @@ const FunTeamSection = () => {
                             src="/fun-team.png"
                             alt="Team Member"
                             fill
-                            className="object-contain"
+                            className="object-contain mt-2"
                         />
                     </div>
 
