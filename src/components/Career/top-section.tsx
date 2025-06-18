@@ -20,28 +20,29 @@ const VenovoxHero = () => {
                 </div>
             </div>
 
-            {/* Image Section with Overlapping Red Tag */}
-            <div className="bg-white w-full flex justify-center py-10">
-                <div className="relative w-[500px]">
-                    {/* Red Box in Top-Right Overlapping Image */}
-                    <div className="absolute top-[-5%] left-0 bg-red-600 text-white px-8  py-4 z-10 shadow-md ">
+
+            <div className="bg-white w-full flex justify-center ">
+                <div className="relative container mx-auto h-[70vh] ">
+                    {/* Red Box */}
+                    <div className="absolute top-[-40px]  bg-red-600 text-white px-8 py-4 z-10 shadow-md">
                         <p className="text-lg md:text-lg font-semibold leading-tight text-center italic">
                             I am Venovox! <br /> Are You?
                         </p>
                     </div>
 
-                    {/* Image */}
+                    {/* Image: Full Width, 50vh Height, No Crop */}
                     <Image
-                        src="/career1.jpg" // Replace with your actual image path
+                        src="/buddy.jpg"
                         alt="Career Banner"
-                        width={500}
-                        height={300}
-                        layout="responsive"
-                        objectFit="cover"
-                        className="rounded"
+                        fill
+                        className="object-cover w-full"
                     />
                 </div>
             </div>
+
+
+
+
         </>
     );
 };
