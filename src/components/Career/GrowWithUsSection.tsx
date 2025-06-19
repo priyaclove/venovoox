@@ -26,32 +26,32 @@ const cardData = [
 
 const GrowWithUsSection = () => {
     return (
-        <section className="bg-white  text-black">
-            <div className="container mx-auto  py-16 px-6 space-y-12">
-                {/* Heading */}
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold ">
+        <section className="bg-white text-black">
+            <div className="container mx-auto py-16 px-6 space-y-12">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
                     Grow with Us, Globally!
                 </h2>
 
-                {/* Grid */}
                 <div className="grid md:grid-cols-2 gap-10">
                     {cardData.map((card, idx) => (
-                        <div key={idx} className="space-y-4">
-                            {/* Image + overlay title */}
-                            <div className="relative  overflow-hidden h-84">
+                        <div key={idx} className="space-y-0"> {/* Remove spacing between children */}
+                            {/* Image */}
+                            <div className="relative overflow-hidden h-84">
                                 <Image
                                     src={card.image}
                                     alt={card.title}
                                     fill
                                     className="object-cover"
                                 />
+                            </div>
 
-                                <h3 className="text-lg md:text-2xl bottom-4 absolute left-4 font-semibold text-white">{card.title}</h3>
-
+                            {/* Red title strip - immediately below image */}
+                            <div className="bg-red-600 text-white text-center py-2 font-semibold">
+                                {card.title}
                             </div>
 
                             {/* Description */}
-                            <p className="text-base md:text-lg text-black text-justify">
+                            <p className="text-base md:text-lg text-black text-justify mt-4">
                                 {card.description}
                             </p>
                         </div>
@@ -59,6 +59,8 @@ const GrowWithUsSection = () => {
                 </div>
             </div>
         </section>
+
+
     );
 };
 
