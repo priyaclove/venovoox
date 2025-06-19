@@ -31,7 +31,7 @@ const FunTeamSection = () => {
 
                     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                         <Image
-                            src="/fun-team4.png"
+                            src="/fun-team (2).png"
                             alt="Team Member"
                             fill
                             className="object-contain mt-2"
