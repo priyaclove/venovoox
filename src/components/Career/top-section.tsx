@@ -5,7 +5,7 @@ const VenovoxHero = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="bg-black text-white min-h-[70vh] flex items-center justify-center px-6 py-12 mt-30">
+            <div className="bg-black text-white min-h-[70vh] flex items-center justify-center px-6 py-12 mt-24">
                 <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-0">
 
                     {/* Left Content */}
