@@ -27,16 +27,16 @@ const cardData = [
 const GrowWithUsSection = () => {
     return (
         <section className="bg-white text-black">
-            <div className="container mx-auto py-16 px-6 space-y-12">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+            <div className="container mx-auto py-12 px-6 space-y-12">
+                <h2 className="text-4xl md:text-6xl font-bold text-black">
                     Grow with Us, Globally!
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-10">
                     {cardData.map((card, idx) => (
-                        <div key={idx} className="space-y-0"> {/* Remove spacing between children */}
+                        <div key={idx} className="space-y-0">
                             {/* Image */}
-                            <div className="relative overflow-hidden h-84">
+                            <div className="relative overflow-hidden h-74">
                                 <Image
                                     src={card.image}
                                     alt={card.title}
@@ -51,7 +51,7 @@ const GrowWithUsSection = () => {
                             </div>
 
                             {/* Description */}
-                            <p className="text-base md:text-lg text-black text-justify mt-4">
+                            <p className="text-gray-600 text-black text-justify mt-4">
                                 {card.description}
                             </p>
                         </div>
