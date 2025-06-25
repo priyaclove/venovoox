@@ -33,10 +33,10 @@ const VenovoxCredibilitySection = () => {
 
                             <div className="space-y-4 leading-relaxed text-justify text-sm md:text-base">
                                 <p>
-                                    At Venovox, we believe trust is earned—and we help you build it from the ground up. By joining us, you're choosing a partner committed to transparency, accuracy, and integrity. Whether it's background screening, due diligence, or compliance checks, our work speaks for itself. We don’t just deliver reports—we deliver peace of mind.
+                                    At Venovox, we believe trust is earned—and we help you build it from the ground up. By joining us, you&lsquo;re choosing a partner committed to transparency, accuracy, and integrity. Whether it&lsquo;s background screening, due diligence, or compliance checks, our work speaks for itself. We don’t just deliver reports—we deliver peace of mind.
                                 </p>
                                 <p>
-                                    At VENOVOX, you're not just part of a team — you're part of a community united by shared goals and diverse strengths.
+                                    At VENOVOX, you&lsquo;re not just part of a team — you&lsquo;re part of a community united by shared goals and diverse strengths.
                                 </p>
                                 <p>
                                     The real-world experience provided by VENOVOX helps bridge the gap between training and performance, resulting not just in learning, but in mastering real-world application.
