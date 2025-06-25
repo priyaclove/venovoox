@@ -13,7 +13,7 @@ const VenovoxHero = () => {
                         <h1 className="text-4xl md:text-6xl font-bold mb-6">
                             Shape The Future Of Trust – <span className='text-red-600'>Join Our Team!</span>
                         </h1>
-                        <p className="leading-relaxed text-justify md:text-left">
+                        <p className=" text-justify ">
                             At VENOVOX, we are passionate about helping businesses make informed decisions through reliable
                             background screening solutions. With branches in four countries and growing, we&apos;re looking for dedicated
                             professionals to join us on this exciting journey and help expand our employee portfolio with credible, talented
