@@ -26,10 +26,11 @@ const VenovoxHero = () => {
                         <Image
                             src="/venovoxx.jpg"
                             alt="Join Our Team"
-                            width={350}
-                            height={300}
+                            width={400}
+                            height={400}
                             className="object-contain h-auto"
                         />
+
                     </div>
                 </div>
             </div>
