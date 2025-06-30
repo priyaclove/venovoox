@@ -13,7 +13,9 @@ const FunTeamSection = () => {
                     {/* Left Text Section */}
                     <div className="space-y-4 md:space-y-6 text-center lg:text-left">
                         <h2 className="text-4xl md:text-6xl font-bold text-white py-2">
-                            Be Part of a <br className="hidden md:block" /> Credible <br className="hidden md:block" /> and Fun Team!
+                            Be Part of a <br />
+                            <span className='ml-12 text-red-600'> Credible</span>
+                            <br className="hidden md:block" /> and Fun Team!
                         </h2>
                         <p className=" text-gray-200 max-w-xl mx-auto lg:mx-0">
                             We’re all about creating a supportive and engaging workplace
