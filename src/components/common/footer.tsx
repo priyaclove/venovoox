@@ -200,6 +200,18 @@ const Footer = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <input
+                    type="number"
+                    placeholder="Your number"
+                    required
+                    className="w-full px-4 py-2 border rounded-md border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent focus:outline-none text-sm transition-all"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
                 >
                   <textarea

@@ -41,7 +41,7 @@ export default function Home() {
                   src="/about-us.jpg"
                   alt="VENOVOX Global Team"
                   fill
-                  className="object-cover"
+                  className="object-contain md:object-cover"
                 />
               </div>
             </div>
