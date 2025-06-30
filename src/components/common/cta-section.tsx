@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MessageSquare } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const promoMessages = [
@@ -186,13 +186,13 @@ export default function StickyPromoBar() {
             </motion.div>
           </AnimatePresence>
         </div>
-        
-        <button 
+
+        <button
           onClick={openWhatsApp}
           className="whatsapp-button pulse"
           aria-label="Contact us on WhatsApp"
         >
-          <MessageSquare size={18} strokeWidth={2.5} />
+          <FaWhatsapp size={25} strokeWidth={2.5} />
           {!isMobile && <span>Chat Now</span>}
         </button>
       </div>
