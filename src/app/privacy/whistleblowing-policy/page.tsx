@@ -5,7 +5,7 @@ export default function WhistleblowingPolicyPage() {
         <>
             <PageBanner />
             <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify">
-                <h1 className="text-3xl font-sensibold mb-6">Whistleblower Policy</h1>
+                <h1 className="text-3xl font-sensibold mb-6">Whistleblowing Policy</h1>
 
                 <p className="mb-4">
                     VENOVOX is committed to a high level of ethical standards and integrity in conducting its business and we encourage ethical conduct as part of our corporate culture with emphasis on sincerity, transparency and fairness. This serves to enhance the trust and confidence in the business operations and performance.
