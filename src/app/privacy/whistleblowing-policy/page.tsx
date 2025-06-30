@@ -4,7 +4,7 @@ export default function WhistleblowingPolicyPage() {
     return (
         <>
             <PageBanner />
-            <div className="container mx-auto px-6 py-10 text-lg text-gray-800">
+            <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify">
                 <h1 className="text-3xl font-sensibold mb-6">Whistleblower Policy</h1>
 
                 <p className="mb-4">
