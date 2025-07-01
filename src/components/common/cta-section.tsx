@@ -5,11 +5,11 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const promoMessages = [
-  "🏆 Top Rated Employment Consultant in Petaling Jaya",
-  "💯 100% Success Rate in Job Placements Across Malaysia",
-  "🎁 Special Offer: Free Resume Review for New Clients",
-  "👔 Professional Recruitment Services in Petaling Jaya",
-  "⚡ Fast-Track Your Career with Malaysia's Leading Job Consultants"
+  " Top Rated Employment Consultant in Petaling Jaya",
+  " 100% Success Rate in Job Placements Across Malaysia",
+  " Special Offer: Free Resume Review for New Clients",
+  " Professional Recruitment Services in Petaling Jaya",
+  " Fast-Track Your Career with Malaysia's Leading Job Consultants"
 ];
 
 export default function StickyPromoBar() {

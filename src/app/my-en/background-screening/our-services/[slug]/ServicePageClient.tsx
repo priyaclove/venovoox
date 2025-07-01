@@ -179,8 +179,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             className={`flex items-start mb-3 group ${isIndented ? "ml-6" : ""
               }`}
           >
-            <span className="text-red-600 mr-3 mt-1 transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
-              {cleanItem.substring(0, 1)}
+            <span className="text-red-600 mr-3 text-center transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-xl">
+              •
             </span>
             <p className="text-gray-700 leading-relaxed">
               {cleanItem.substring(2)}
@@ -189,19 +189,23 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         );
       }
 
-      if (/^[🔍🛡💼⚖📊🔄🏢📉💰🌍🔒📦🛒📁🔹✔]/u.test(item.trim())) {
+      // Check for any emoji at the start and replace with bullet point
+      if (/^[🔍🛡💼⚖📊🔄🏢📉💰🌍🔒📦🛒📁🔹✔⚖️🎙📝🛠⚖️📋🏛📜⚖🔎]/u.test(item.trim())) {
         const cleanItem = item.trim();
         const isIndented = item.startsWith("    ");
-        const [emoji, ...rest] = cleanItem.split(" ");
+        // Remove the emoji and get the rest of the text
+        const textWithoutEmoji = cleanItem.replace(/^[\u{1F000}-\u{1F6FF}][\u{2000}-\u{206F}]?/u, '').trim();
         return (
           <div
             key={index}
             className={`flex items-start mb-4 group ${isIndented ? "ml-6" : ""
               }`}
           >
-            <span className="text-xl mr-3 mt-0.5 flex-shrink-0">{emoji}</span>
+            <span className="text-red-600 mr-3  transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-2xl">
+              •
+            </span>
             <p className="text-gray-800 font-medium leading-relaxed">
-              {rest.join(" ")}
+              {textWithoutEmoji}
             </p>
           </div>
         );
