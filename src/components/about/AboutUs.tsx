@@ -34,7 +34,7 @@ export default function AboutUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
           >
-            <span>
+            <span className="text-base">
               Empowering businesses with streamlined, trustworthy hiring <br /> and advisory services.
             </span>
 
@@ -59,12 +59,13 @@ export default function AboutUs() {
                 Our Story
               </h2>
             </div>
-            <p className=" text-justify text-gray-600 leading-relaxed mb-6">
+            <p className="text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] text-gray-600 leading-relaxed mb-6 text-lg">
+
               From a modest beginning with a small-scale operation, VENOVOX has
               come a long way in its establishment as a cutting-edge service
               provider in the Talent Management Workspace.
             </p>
-            <p className=" text-justify text-gray-600 leading-relaxed">
+            <p className="text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] text-gray-600 leading-relaxed text-lg ">
               Our successful journey is evident in our unwavering commitment to
               excellence, novelty, and customer satisfaction. Venovox offers
               wide-ranging and holistic business solutions to help companies
@@ -122,7 +123,7 @@ export default function AboutUs() {
                 Our Approach
               </h2>
             </div>
-            <p className=" text-justify text-gray-600 leading-relaxed mb-6">
+            <p className="text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] text-gray-600 leading-relaxed mb-6 text-lg">
               Our team at VENOVOX believes in a collaborative approach designed
               to understand your unique business requirements. We work
               meticulously to identify your goals, challenges, and

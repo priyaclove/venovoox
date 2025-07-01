@@ -4,7 +4,7 @@ export default function TermsAndConditionsPage() {
     return (
         <>
             <PageBanner />
-            <div className="container mx-auto px-6 py-10 text-gray-800 text-lg text-justify">
+            <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify [text-justify:inter-word] hyphens-auto ">
                 <h1 className="text-3xl font-semibold mb-6">Terms and Conditions</h1>
 
                 <p className="mb-4 text-justify">
