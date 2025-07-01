@@ -331,7 +331,10 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
             {/* Services Sections */}
             {service.content && (
-              <motion.div variants={fadeInUp} className="prose text-justify [text-justify:inter-word] hyphens-auto max-w-none">
+              <motion.div
+                variants={fadeInUp}
+                className="prose prose-p:text-justify prose-p:[text-justify:inter-word] prose-p:hyphens-auto prose-p:leading-relaxed prose-p:tracking-normal text-gray-800 max-w-none"
+              >
                 {renderContent(service.content)}
               </motion.div>
             )}
