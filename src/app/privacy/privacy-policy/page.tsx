@@ -3,7 +3,8 @@ export default function PrivacyPolicyPage() {
     return (
         <>
             <PrivateBanner />
-            <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify">
+            <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify [text-justify:inter-word] hyphens-auto ">
+
                 <h1 className="text-3xl font-semibold mb-6">Privacy Policy</h1>
 
                 <p className="mb-4">
