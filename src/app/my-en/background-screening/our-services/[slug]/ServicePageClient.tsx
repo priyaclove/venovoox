@@ -176,16 +176,16 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         return (
           <div
             key={index}
-            className={`flex items-start mb-3 group ${isIndented ? "ml-6" : ""
-              }`}
+            className={`flex items-start gap-2 mb-3 group ${isIndented ? "ml-6" : ""}`}
           >
-            <span className="text-red-600 mr-3 text-center transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-xl">
+            <span className="text-black text-2xl relative -top-1 transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
               •
             </span>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700  leading-relaxed">
               {cleanItem.substring(2)}
             </p>
           </div>
+
         );
       }
 
@@ -196,18 +196,15 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         // Remove the emoji and get the rest of the text
         const textWithoutEmoji = cleanItem.replace(/^[\u{1F000}-\u{1F6FF}][\u{2000}-\u{206F}]?/u, '').trim();
         return (
-          <div
-            key={index}
-            className={`flex items-start mb-4 group ${isIndented ? "ml-6" : ""
-              }`}
-          >
-            <span className="text-red-600 mr-3  transform group-hover:scale-110 transition-transform duration-200 flex-shrink-0 text-2xl">
-              •
-            </span>
-            <p className="text-gray-800 font-medium leading-relaxed">
-              {textWithoutEmoji}
-            </p>
+          <div key={index} className="flex items-center gap-4 my-6">
+            <div className={`flex items-start group ${isIndented ? "ml-6" : ""}`}>
+              <span className="text-black text-4xl relative -top-2 mr-2 invisible ">•</span>
+              <p className="text-gray-800 font-medium leading-relaxed">
+                {textWithoutEmoji}
+              </p>
+            </div>
           </div>
+
         );
       }
 
