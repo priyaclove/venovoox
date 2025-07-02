@@ -198,8 +198,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         return (
           <div key={index} className="flex items-center gap-4 my-6">
             <div className={`flex items-start group ${isIndented ? "ml-6" : ""}`}>
-              <span className="text-black text-xl relative -top-0 mr-2 ">➜</span>
-              <p className="text-gray-800 font-medium leading-relaxed">
+              <span className="text-black text-xl relative -top-0 ml-4 "> ➜  </span>
+              <p className="text-gray-800 font-medium leading-relaxed ml-2">
                 {textWithoutEmoji}
               </p>
             </div>
