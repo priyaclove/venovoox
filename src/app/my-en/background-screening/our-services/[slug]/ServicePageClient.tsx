@@ -198,7 +198,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         return (
           <div key={index} className="flex items-center gap-4 my-6">
             <div className={`flex items-start group ${isIndented ? "ml-6" : ""}`}>
-              <span className="text-black text-4xl relative -top-2 mr-2 invisible ">•</span>
+              <span className="text-black text-xl relative -top-0 mr-2 ">➜</span>
               <p className="text-gray-800 font-medium leading-relaxed">
                 {textWithoutEmoji}
               </p>
@@ -334,7 +334,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             {service.content && (
               <motion.div
                 variants={fadeInUp}
-                className="prose prose-p:text-justify prose-p:[text-justify:inter-word] prose-p:hyphens-auto prose-p:leading-relaxed prose-p:tracking-normal text-gray-800 max-w-none"
+                className="prose prose-p:text-justify prose-p:[text-justify:inter-word] prose-p:hyphens-none prose-p:leading-relaxed prose-p:tracking-normal text-gray-800 max-w-none"
               >
                 {renderContent(service.content)}
               </motion.div>

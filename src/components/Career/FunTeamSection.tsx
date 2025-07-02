@@ -17,7 +17,7 @@ const FunTeamSection = () => {
                             <span className="ml-12">Credible</span>
                             <br className="hidden md:block" /> and Fun Team!
                         </h2>
-                        <p className="text-gray-200 text-justify [text-justify:inter-word] hyphens-auto max-w-xl mx-auto lg:mx-0">
+                        <p className="text-gray-200 text-justify [text-justify:inter-word] hyphens-none max-w-xl mx-auto lg:mx-0">
                             We’re all about creating a supportive and engaging workplace
                             where your ideas are heard and your efforts are recognized.
                         </p>
