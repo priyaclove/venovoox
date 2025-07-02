@@ -32,7 +32,7 @@ const VenovoxCredibilitySection = () => {
                                 <span className="text-red-600"> Credibility is Key!</span>
                             </h2>
 
-                            <p className="leading-relaxed text-justify [text-justify:inter-word] hyphens-auto">
+                            <p className="leading-relaxed text-justify [text-justify:inter-word] hyphens-none">
                                 At VENOVOX, we believe trust is earned—and we help you build it from the ground up. By joining us, you&lsquo;re choosing a partner committed to transparency, accuracy, and integrity. Whether it&lsquo;s background screening, due diligence, or compliance checks, our work speaks for itself. We don’t just deliver reports—we deliver peace of mind.
                             </p>
                         </div>

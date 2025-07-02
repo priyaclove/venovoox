@@ -29,10 +29,10 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] mb-6">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
                   VENOVOX is a premier risk management and background screening consultancy that provides specialised services in due diligence, security advisory, background checks, and intelligence analysis throughout Malaysia, the Asia-Pacific regions, and globally.
                 </p>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch]">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch]">
                   By leveraging local insight and global capabilities, we support businesses in mitigating risk, maintaining compliance, and enhancing operational effectiveness.
                 </p>
               </div>
@@ -71,10 +71,10 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Rooted in <span className="text-red-600">Local Expertise</span>, Driven by <span className="text-red-600">International Standards</span>
                 </h3>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] mb-6">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
                   With its business initiated in Malaysia back in 1999, today, VENOVOX is headquartered in Texas, USA. VENOVOX has become a trusted leader in risk management solutions and background screening services.
                 </p>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch">
                   We specialize in identifying, assessing, authenticating, and mitigating risks to people, assets, operations, and reputations.
                 </p>
               </div>
@@ -97,10 +97,10 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Your Trusted Experts in <span className="text-red-600">Background Screening</span> and <span className="text-red-600">Risk Solutions</span>
                 </h3>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] mb-6">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
                   Our heightened screening process delivers accurate background check results with a quicker turnaround time, ensuring efficiency without compromising its quality.
                 </p>
-                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[70ch] ">
+                <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] ">
                   With a seamless and stress-free experience, you can rely on our proven track record of accuracy and timeliness to support your hiring and authentication needs.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold">Our Vision</h3>
                 </div>
-                <p className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[60ch]">
+                <p className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[60ch]">
                   As an ISO 27001-certified company, we connect global security partners to deliver expert ground support and intelligence consulting across APAC and the global region.
                 </p>
               </motion.div>
@@ -158,7 +158,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold">Our Mission</h3>
                 </div>
-                <p className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[60ch]">
+                <p className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[60ch]">
                   We deliver tailored risk management solutions that strengthen resilience, protect operations, and support strategic growth while upholding the highest ethical standards.
                 </p>
               </motion.div>
@@ -174,7 +174,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold">Our Values</h3>
                 </div>
-                <ul className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-auto max-w-[60ch]">
+                <ul className="text-base text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[60ch]">
                   <li className="flex items-start">
                     <Check className="text-red-600 w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Reducing Risk – Proactively identify and mitigate threats</span>

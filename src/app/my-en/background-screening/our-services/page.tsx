@@ -197,7 +197,7 @@ export default function OurServicesPage() {
                   <h2 className="text-2xl font-bold mb-3 text-black group-hover:text-red-600 transition-colors">
                     {service.title}
                   </h2>
-                  <p className="text-gray-700 mb-6 flex-grow text-justify [text-justify:inter-word] hyphens-auto">
+                  <p className="text-gray-700 mb-6 flex-grow text-justify [text-justify:inter-word] hyphens-none">
 
                     {service.metaDescription.length > 120
                       ? `${service.metaDescription.substring(0, 120)}...`
@@ -394,7 +394,7 @@ export default function OurServicesPage() {
               >
                 <div className="flex justify-center mb-6">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-black">{feature.title}</h3>
-                <p className="text-gray-700 text-justify [text-justify:inter-word] hyphens-auto">
+                <p className="text-gray-700 text-justify [text-justify:inter-word] hyphens-none">
                   {feature.description}
                 </p>
               </motion.div>

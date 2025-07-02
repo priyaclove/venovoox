@@ -51,7 +51,7 @@ const GrowWithUsSection = () => {
                             </div>
 
                             {/* Description */}
-                            <p className="text-gray-600 text-justify [text-justify:inter-word] hyphens-auto mt-4">
+                            <p className="text-gray-600 text-justify [text-justify:inter-word] hyphens-none mt-4">
 
                                 {card.description}
                             </p>
