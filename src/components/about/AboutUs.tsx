@@ -59,20 +59,15 @@ export default function AboutUs() {
                 Our Story
               </h2>
             </div>
-            <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-6 text-lg">
-
-              From a modest beginning with a small-scale operation, VENOVOX has
-              come a long way in its establishment as a cutting-edge service
-              provider in the Talent Management Workspace.
+            <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-1 text-lg">
+              From its origins with a small-scale operation, VENOVOX has evolved into a cutting-edge service provider in the talent management and risk intelligence space
             </p>
-            <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed text-lg ">
-              Our successful journey is evident in our unwavering commitment to
-              excellence, novelty, and customer satisfaction. Venovox offers
-              wide-ranging and holistic business solutions to help companies
-              thrive competitively in the current aggressive market. With our
-              professional and expert team and a proven track record of success,
-              we are committed to providing unparalleled service to meet your
-              business needs.
+            <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-1 text-lg">
+              Our successful journey has been defined by an unwavering commitment to excellence, innovation, and customer satisfaction. Today, we deliver comprehensive, end-to-end business solutions that empower organisations to compete and thrive in an increasingly dynamic market.
+            </p>
+            <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-1 text-lg ">
+              Backed by a team of seasoned professionals and a proven track record of success, VENOVOX is dedicated to delivering exceptional service tailored to your business needs.
+
             </p>
           </div>
           <motion.div
@@ -124,14 +119,7 @@ export default function AboutUs() {
               </h2>
             </div>
             <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-6 text-lg">
-              Our team at VENOVOX believes in a collaborative approach designed
-              to understand your unique business requirements. We work
-              meticulously to identify your goals, challenges, and
-              opportunities, so that we can build customized solutions tailored
-              to your specific needs. Our broad and all-inclusive approach
-              addresses every aspect of our clients’ businesses, from strategy
-              and operations to technology and innovation, to provide a
-              comprehensive solution that delivers results.
+              At VENOVOX, we embrace a collaborative approach designed to understand your unique business requirements. We work meticulously to identify your goals, challenges, and opportunities—enabling us to craft tailored solutions that align with your strategic objectives. Our holistic methodology spans every facet of your organisation, from strategy and operations to technology and innovation, ensuring measurable outcomes and long-term value.
             </p>
           </div>
         </motion.section>

@@ -29,10 +29,11 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6  ">
-                  VENOVOX is a premier risk management and background screening consultancy that provides specialised services in due diligence, security advisory, background checks, and intelligence analysis throughout Malaysia, the Asia-Pacific regions, and globally.
+                  VENOVOX is a premier risk management and background screening consultancy offering specialised services in due diligence, security advisory, background checks, and intelligence analysis across Malaysia, the Asia-Pacific regions, and globally.
                 </p>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch]">
-                  By leveraging local insight and global capabilities, we support businesses in mitigating risk, maintaining compliance, and enhancing operational effectiveness.
+                  By leveraging local insight and global capabilities, we support businesses mitigate risk, ensure compliance, and enhance operational effectiveness.
+
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
@@ -71,10 +72,12 @@ export default function Home() {
                   Rooted in <span className="text-red-600">Local Expertise</span>, Driven by <span className="text-red-600">International Standards</span>
                 </h3>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
-                  With its business initiated in Malaysia back in 1999, today, VENOVOX is headquartered in Texas, USA. VENOVOX has become a trusted leader in risk management solutions and background screening services.
+                  Founded in Malaysia back in 1999 and now headquartered in Texas, USA, VENOVOX has grown into a trusted leader in risk management solutions and background screening services.
+
                 </p>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch]">
-                  We specialize in identifying, assessing, authenticating, and mitigating risks to people, assets, operations, and reputations.
+                  We specialize in identifying, assessing, authenticating, and mitigating risks to people, assets, operations, and reputations — empowering organisations to operate securely and confidently in complex environments.
+
                 </p>
               </div>
             </div>
@@ -97,10 +100,11 @@ export default function Home() {
                   Your Trusted Experts in <span className="text-red-600">Background Screening</span> and <span className="text-red-600">Risk Solutions</span>
                 </h3>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
-                  Our heightened screening process delivers accurate background check results with a quicker turnaround time, ensuring efficiency without compromising its quality.
+                  Our enhanced screening process delivers accurate background check results with faster turnaround times – ensuring efficiency without compromising quality.
+
                 </p>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch]">
-                  With a seamless and stress-free experience, you can rely on our proven track record of accuracy and timeliness to support your hiring and authentication needs.
+                  With a seamless, stress-free experience and a proven track record of precision and timeliness, you can rely on us to support your hiring, verification, and authentication needs.
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
