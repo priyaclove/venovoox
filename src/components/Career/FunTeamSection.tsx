@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const FunTeamSection = () => {
     return (
@@ -32,17 +32,17 @@ const FunTeamSection = () => {
                     {/* Right Image Section with Logo in Background */}
                     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                         {/* Background Venovox Logo */}
-                        <Image
+                        <img
                             src="/venovox-logo.png" // Replace with actual logo path
                             alt="Venovox Logo"
-                            fill
+                            // fill
                             className="object-contain opacity-10 absolute z-0"
                         />
                         {/* Person Image */}
-                        <Image
+                        <img
                             src="/funteam.png"
                             alt="Team Member"
-                            fill
+                            // fill
                             className="object-contain relative z-10"
                         />
                     </div>

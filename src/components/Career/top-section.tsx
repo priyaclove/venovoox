@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const VenovoxHero = () => {
     return (
@@ -23,7 +23,7 @@ const VenovoxHero = () => {
 
                     {/* Right Image */}
                     <div className="md:w-[350px] flex justify-center mt-8 md:mt-0">
-                        <Image
+                        <img
                             src="/venovoxx.jpg"
                             alt="Join Our Team"
                             width={400}

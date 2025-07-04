@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface MenuItem {
   name: string;
@@ -94,12 +94,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-[100px]">
           {/* Left Logo */}
           <Link href="/" className="flex items-center">
-            <Image
+            <img
               src={navData.logo}
               alt="Main Logo"
               width={125}
               height={125}
-              priority
+              // priority
               className=""
             />
           </Link>
@@ -154,13 +154,13 @@ export default function Navbar() {
           {/* Right Logo */}
           <Link href="/my-en/background-screening" className="hidden lg:block">
             <div className="h-16 w-16 relative">
-              <Image
+              <img
                 src={navData.endLogo}
                 alt="End Logo"
                 width={64}
                 height={64}
                 className="object-contain w-full h-full "
-                priority
+              // priority
               />
             </div>
           </Link>
@@ -234,7 +234,7 @@ export default function Navbar() {
             <div className="pt-4 pb-2 flex justify-center">
               <Link href="/" onClick={() => setIsMenuOpen(false)}>
                 <div className="h-16 w-16 relative">
-                  <Image
+                  <img
                     src={navData.endLogo}
                     alt="End Logo"
                     width={64}

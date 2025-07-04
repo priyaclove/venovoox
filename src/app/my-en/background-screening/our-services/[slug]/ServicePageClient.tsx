@@ -2,7 +2,7 @@
 
 import { type Key, useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface InternalLink {
@@ -257,12 +257,12 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
     >
       {/* Hero section */}
       <div className="relative mt-20 w-full h-[45vh] overflow-hidden">
-        <Image
+        <img
           src={getServiceImage(service.id) || "/placeholder.svg"}
           alt={service.title}
-          fill
+          // fill
           style={{ objectFit: "cover" }}
-          priority
+          // priority
           className="brightness-50"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

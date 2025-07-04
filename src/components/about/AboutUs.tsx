@@ -7,7 +7,7 @@ import {
   BookOpen,
   ClipboardList,
 } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -77,12 +77,12 @@ export default function AboutUs() {
             viewport={{ once: true }}
             className="relative h-80 rounded-xl overflow-hidden shadow-lg"
           >
-            <Image
+            <img
               src="/ourstory.jpg"
               alt="Our team working together"
-              fill
+              // fill
               className="object-cover"
-              priority
+            // priority
             />
           </motion.div>
         </motion.section>
@@ -102,10 +102,10 @@ export default function AboutUs() {
             viewport={{ once: true }}
             className="relative h-80 rounded-xl overflow-hidden shadow-lg order-2 md:order-1"
           >
-            <Image
+            <img
               src="/our-story.png"
               alt="Our consultative approach"
-              fill
+              // fill
               className="object-cover"
             />
           </motion.div>

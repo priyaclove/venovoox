@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 import { motion, useInView, AnimatePresence } from "framer-motion"
 import servicesData from "@/data/our-services.json"
 
@@ -82,12 +82,12 @@ export default function OurServicesPage() {
       {/* Hero section */}
       <div className="relative bg-black text-white">
         <div className="absolute inset-0 z-0">
-          <Image
+          <img
             src="/images/services-hero.jpg"
             alt="Our Services"
-            fill
+            // fill
             style={{ objectFit: "cover", objectPosition: "center" }}
-            priority
+          // priority
           />
           <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
@@ -182,10 +182,10 @@ export default function OurServicesPage() {
                 className="group bg-white border border-gray-200 overflow-hidden flex flex-col h-full"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <Image
+                  <img
                     src={imgErrors[service.id] ? '/images/placeholder.svg' : getServiceImage(service.id, service.image)}
                     alt={service.title}
-                    fill
+                    // fill
                     style={{ objectFit: "cover" }}
                     onError={() => handleImageError(service.id)}
                     className="group-hover:scale-105 transition-transform duration-500"

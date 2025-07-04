@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const recognizedByLogos = [
@@ -50,7 +50,7 @@ const RecognizedBy = () => {
           >
             {[...recognizedByLogos, ...recognizedByLogos].map((logo, index) => (
               <div key={index} className="min-w-[160px] h-[120px] flex items-center justify-center">
-                <Image
+                <img
                   src={logo.src}
                   alt={logo.alt}
                   width={logo.width}

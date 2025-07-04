@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const VenovoxCredibilitySection = () => {
     return (
@@ -15,7 +15,7 @@ const VenovoxCredibilitySection = () => {
 
                         {/* Left Image */}
                         <div className="md:w-[40%] flex justify-center md:justify-start">
-                            <Image
+                            <img
                                 src="/career1.jpg"
                                 height={400}
                                 width={400}
