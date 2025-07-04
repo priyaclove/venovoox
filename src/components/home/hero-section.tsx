@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import { useEffect } from "react";
 
 const HeroSection = () => {
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative text-white overflow-hidden h-[700px] mt-10 flex items-center">
-      <Image
+      <img
         height={700}
         width={2000}
         src="/hero.webp"

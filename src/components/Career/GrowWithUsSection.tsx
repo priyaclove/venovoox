@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const cardData = [
     {
@@ -37,10 +37,10 @@ const GrowWithUsSection = () => {
                         <div key={idx} className="space-y-0">
                             {/* Image */}
                             <div className="relative overflow-hidden h-74">
-                                <Image
+                                <img
                                     src={card.image}
                                     alt={card.title}
-                                    fill
+                                    // fill
                                     className="object-cover"
                                 />
                             </div>

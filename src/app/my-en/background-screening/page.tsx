@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
@@ -37,10 +37,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/about-us.jpg"
                   alt="VENOVOX Global Team"
-                  fill
+                  // fill
                   className="object-contain md:object-cover"
                 />
               </div>
@@ -60,10 +60,10 @@ export default function Home() {
           >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/vector2.png"
                   alt="International Standards"
-                  fill
+                  // fill
                   className="object-cover"
                 />
               </div>
@@ -108,10 +108,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <Image
+                <img
                   src="/vector1.png"
                   alt="Screening Process"
-                  fill
+                  // fill
                   className="object-cover"
                 />
               </div>
