@@ -152,18 +152,23 @@ export default function Navbar() {
           </div>
 
           {/* Right Logo */}
-          <Link href="/my-en/background-screening" className="hidden lg:block">
+          <a
+            href="https://hi.venovox.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:block"
+          >
             <div className="h-16 w-16 relative">
               <img
                 src={navData.endLogo}
                 alt="End Logo"
                 width={64}
                 height={64}
-                className="object-contain w-full h-full "
-              // priority
+                className="object-contain w-full h-full"
               />
             </div>
-          </Link>
+          </a>
+
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
