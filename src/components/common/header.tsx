@@ -154,7 +154,6 @@ export default function Navbar() {
           {/* Right Logo */}
           <a
             href="https://hi.venovox.com"
-            target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:block"
           >
@@ -237,7 +236,7 @@ export default function Navbar() {
 
             {/* End Logo in Mobile Menu */}
             <div className="pt-4 pb-2 flex justify-center">
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+              <a href="https://hi.venovox.com" onClick={() => setIsMenuOpen(false)}>
                 <div className="h-16 w-16 relative">
                   <img
                     src={navData.endLogo}
@@ -247,7 +246,7 @@ export default function Navbar() {
                     className="object-contain w-full h-full"
                   />
                 </div>
-              </Link>
+              </a>
             </div>
 
             {/* Contact Button */}
