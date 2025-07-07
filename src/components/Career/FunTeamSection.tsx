@@ -33,19 +33,19 @@ const FunTeamSection = () => {
                     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                         {/* Background Venovox Logo */}
                         <img
-                            src="/venovox-logo.png" // Replace with actual logo path
+                            src="/venovox-logo.png"
                             alt="Venovox Logo"
-                            // fill
-                            className="object-contain opacity-10 absolute z-0"
+                            className="absolute inset-0 w-full h-full object-contain opacity-10 z-0"
                         />
+
                         {/* Person Image */}
                         <img
                             src="/funteam.png"
                             alt="Team Member"
-                            // fill
-                            className="object-contain relative z-10"
+                            className="absolute inset-0 w-full h-full object-contain z-10"
                         />
                     </div>
+
 
                 </div>
             </div>

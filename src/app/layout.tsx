@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Venovox",
   description: "Venovox is a leading provider of risk intelligence and background screening solutions, empowering businesses to make informed hiring decisions.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -36,12 +36,11 @@ const GrowWithUsSection = () => {
                     {cardData.map((card, idx) => (
                         <div key={idx} className="space-y-0">
                             {/* Image */}
-                            <div className="relative overflow-hidden h-74">
+                            <div className="relative overflow-hidden h-[296px]">
                                 <img
                                     src={card.image}
                                     alt={card.title}
-                                    // fill
-                                    className="object-cover"
+                                    className="absolute inset-0 w-full h-full object-cover"
                                 />
                             </div>
 
