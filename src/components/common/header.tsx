@@ -25,17 +25,17 @@ const navData = {
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",
-      path: "/my-en/background-screening/our-services",
+      path: "/my-en/our-services",
       subItems: [
-        { name: "Risk Intelligence", path: "/my-en/background-screening/our-services/risk-intelligence/" },
-        { name: "Due Diligence", path: "/my-en/background-screening/our-services/due-diligence/" },
-        { name: "Risk & Audit", path: "/my-en/background-screening/our-services/risk-audit/" },
-        { name: "Compliance", path: "/my-en/background-screening/our-services/compliance/" },
-        { name: "Intellectual Property", path: "/my-en/background-screening/our-services/intellectual-property/" },
-        { name: "Counter Measures", path: "/my-en/background-screening/our-services/counter-measures/" },
-        { name: "Financial Crime", path: "/my-en/background-screening/our-services/financial-crime/" },
-        { name: "HR Services", path: "/my-en/background-screening/our-services/hr-services/" },
-        { name: "Cyber Security", path: "/my-en/background-screening/our-services/cyber-security/" }
+        { name: "Risk Intelligence", path: "/my-en/background-screening/risk-intelligence/" },
+        { name: "Due Diligence", path: "/my-en/background-screening/due-diligence/" },
+        { name: "Risk & Audit", path: "/my-en/background-screening/risk-audit/" },
+        { name: "Compliance", path: "/my-en/background-screening/compliance/" },
+        { name: "Intellectual Property", path: "/my-en/background-screening/intellectual-property/" },
+        { name: "Counter Measures", path: "/my-en/background-screening/counter-measures/" },
+        { name: "Financial Crime", path: "/my-en/background-screening/financial-crime/" },
+        { name: "HR Services", path: "/my-en/background-screening/hr-services/" },
+        { name: "Cyber Security", path: "/my-en/background-screening/cyber-security/" }
       ]
     },
     { name: "Contact Us", path: "/my-en/contact-us" },
