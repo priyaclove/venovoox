@@ -13,7 +13,7 @@
         "accent": "red-600",
         "background": "white",
         "text": "gray-700"
-      },
+      },   
       "sections": [
         {
           "id": "hero-onboarding",
