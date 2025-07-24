@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import Link from "next/link"
 // import Image from "next/image"
-import { motion, useInView, AnimatePresence } from "framer-motion"
+import { motion, useInView, AnimatePresence, Variants } from "framer-motion"
 import servicesData from "@/data/our-services.json"
 
 export default function OurServicesPage() {
@@ -27,8 +27,8 @@ export default function OurServicesPage() {
         return matchesSearch && matchesCategory
     })
 
-    // Animation variants
-    const staggerContainer = {
+    // Animation variants - properly typed
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -39,26 +39,26 @@ export default function OurServicesPage() {
         },
     }
 
-    const fadeInUp = {
+    const fadeInUp: Variants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 25,
                 stiffness: 100,
             },
         },
     }
 
-    const scaleIn = {
+    const scaleIn: Variants = {
         hidden: { scale: 0.9, opacity: 0 },
         visible: {
             scale: 1,
             opacity: 1,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 25,
                 stiffness: 100,
             },
@@ -175,7 +175,6 @@ export default function OurServicesPage() {
                     >
 
                         {filteredServices.map((service) => (
-                            console.log(service),
                             <motion.div
                                 key={service.id}
                                 variants={fadeInUp}
