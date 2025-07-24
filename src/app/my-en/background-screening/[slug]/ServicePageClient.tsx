@@ -3,7 +3,7 @@
 import { type Key, useEffect, useState } from "react";
 import Link from "next/link";
 // import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface InternalLink {
     text: string;
@@ -77,7 +77,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         }
     };
 
-    const pageTransition = {
+    const pageTransition: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -86,7 +86,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         exit: { opacity: 0, transition: { duration: 0.4 } },
     };
 
-    const staggerContainer = {
+    const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -97,26 +97,26 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         },
     };
 
-    const fadeInUp = {
+    const fadeInUp: Variants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 20,
                 stiffness: 100,
             },
         },
     };
 
-    const scaleIn = {
+    const scaleIn: Variants = {
         hidden: { scale: 0.9, opacity: 0 },
         visible: {
             scale: 1,
             opacity: 1,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 20,
                 stiffness: 100,
             },
