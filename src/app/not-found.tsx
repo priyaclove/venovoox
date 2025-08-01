@@ -33,7 +33,7 @@ export default function Custom404() {
 
                 {/* Back Home Button */}
                 <Link
-                    href="/my-en/background-screening"
+                    href="/"
                     className="inline-flex items-center bg-red-600 text-white px-8 py-3 rounded-full font-semibold scale-100 hover:scale-105 transition duration-300 ease-in-out"
                 >
                     <ArrowLeft className="w-5 h-5 mr-2" />

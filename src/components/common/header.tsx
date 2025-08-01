@@ -21,7 +21,7 @@ const navData = {
   logo: "/venovox-logo.png",
   endLogo: "/venovox-logo2.png",
   menuItems: [
-    { name: "Home", path: "/my-en/background-screening" },
+    { name: "Home", path: "/" },
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",

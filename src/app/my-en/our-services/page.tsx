@@ -203,7 +203,7 @@ export default function OurServicesPage() {
                                             : service.metaDescription}
                                     </p>
                                     <Link
-                                        href={`/my-en/background-screening/our-services/${service.id}`}
+                                        href={`/my-en/background-screening/${service.id}`}
                                         className="inline-flex items-center text-red-600 font-medium group-hover:translate-x-2 transition-transform duration-300"
                                     >
                                         Learn more
