@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   //this  will give me out file 
-  output: "export",
+  // output: "export",
 
   async redirects() {
     return [
