@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network } from "lucide-react";
 import { blogData } from "@/data/blogsData";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network };
 
 interface BlogPageProps {
@@ -40,7 +40,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
     const blog = blogData.find((b) => b.slug === slug);
 
     if (!blog) return notFound();
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const renderSection = (section: any, index: number) => {
         switch (section.type) {
             case "introduction":
@@ -127,6 +127,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                         {section.content}
                                     </p>
                                     <div className="space-y-6">
+                                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                                         {section.benefits.map((benefit: any, benefitIndex: number) => {
                                             const Icon = iconMap[benefit.icon];
                                             return (
@@ -160,6 +161,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                     <section key={index} className="mb-20">
                         <div className="mx-auto">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                                 {section.sections.map((subsection: any, subIndex: number) => (
                                     <div
                                         key={subIndex}

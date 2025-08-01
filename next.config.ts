@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       // Main pages
       {
         source: "/",
-        destination: "/my-en/background-screening",
+        destination: "/",
         permanent: true,
       },
       {

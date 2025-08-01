@@ -6,6 +6,7 @@ import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
 
 
+
 export default function Home() {
   return (
     <main className="bg-white text-black">

@@ -7,6 +7,7 @@ import {
   BookOpen,
   ClipboardList,
 } from "lucide-react";
+import Link from "next/link";
 // import Image from "next/image";
 
 export default function AboutUs() {
@@ -161,13 +162,13 @@ export default function AboutUs() {
               <span className="text-white font-semibold"> Our experts are ready to discuss your unique needs and craft a
                 solution that drives results.</span>
             </p>
-            <a
+            <Link
               href="/my-en/contact-us"
               className="inline-flex items-center gap-2 bg-white text-red-700 px-8 py-4 rounded-full hover:bg-gray-100 transition font-medium shadow-md hover:shadow-lg"
             >
               <MailIcon size={18} />
               Get in Touch
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
